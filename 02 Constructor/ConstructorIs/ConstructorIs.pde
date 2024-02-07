@@ -12,6 +12,7 @@ void setup() {
   myBall.x = startX; //spawn myBall in the middle of the display
   myBall.y = startY;
   myBall.diameter = referentMeasure * 1/20;
+  myBall.colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var 
   //ellipse(x, y, diameter, diameter); //ball
   //What if?
   //Ball yourBall = new Ball();
