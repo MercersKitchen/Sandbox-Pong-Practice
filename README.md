@@ -22,8 +22,8 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 ---
 
 # To Include: URLs
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong_An-Object-Is
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong_Constructor/tree/main
+- [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_An-Object-Is
+- [ALMOST DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Constructor/tree/main
 - https://github.com/Advanced-App-Dev-and-Deploy/Progressions-of-Arithemtic
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_Ball-Class-Instances/tree/main
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion/tree/main
