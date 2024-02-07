@@ -16,7 +16,7 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [x] Difference between a class object, an instance, and a visual object
 - [x] Define Ball-class
 - [ ] Explore Constructor-in-Driver & Constructor-encapsulated
-        - Various Ways of Interpreting Object Constructors
+  - Various Ways of Interpreting Object Constructors
 - [ ] 
 
 ---
