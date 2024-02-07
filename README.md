@@ -8,13 +8,15 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 ---
 
 # Table of Contents
-- Case Study To Do List: 
+- Case Study To Do List: ball, net, goal, scoreboard, start button, timer, splash screen (including 
 
 ---
 
 # To Do List
 - [x] Difference between a class object, an instance, and a visual object
-- [ ] Define Ball-class, create objects in Driver
+- [x] Define Ball-class
+- [ ] Explore Constructor-in-Driver & Constructor-encapsulated
+        - Various Ways of Interpreting Object Constructors
 - [ ] 
 
 ---
