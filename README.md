@@ -19,6 +19,11 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - Various Ways of Interpreting Object Constructors
 - [ ] 
 
+### Reminders for Introductory Objects
+- Getters and Setters
+- toString() methods
+
+
 ---
 
 # To Include: URLs
@@ -31,3 +36,6 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
 
 # To Include: 
+- Introductory Objects
+
+---
