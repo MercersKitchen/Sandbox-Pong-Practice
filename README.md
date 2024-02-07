@@ -19,6 +19,11 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - Various Ways of Interpreting Object Constructors
 - [ ] 
 
+- [ ] 
+### Additions to Programs
+- CLASS: global variables, local variables, primitive variables, variables "bigger" than primitive
+
+- 
 ### Reminders for Introductory Objects
 - Getters and Setters
 - toString() methods
