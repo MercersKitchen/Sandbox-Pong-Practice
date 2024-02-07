@@ -11,7 +11,7 @@ void setup() {
   int referentMeasure = ( width < height ) ? width : height ; //Review Ternary Operator
   myBall.x = startX; //spawn myBall in the middle of the display
   myBall.y = startY;
-  myBall.diameter = 
+  myBall.diameter = referentMeasure * 1/20;
   //ellipse(x, y, diameter, diameter); //ball
   //What if?
   //Ball yourBall = new Ball();
