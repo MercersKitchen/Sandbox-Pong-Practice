@@ -3,6 +3,7 @@ class Ball
   //Global Variables
   float x, y, diameter;
   color colour;
+  float xSpeed, ySpeed;
   //
   //Constructor
   Ball () {
@@ -17,11 +18,11 @@ class Ball
     y = startY;
     diameter = referentMeasure * 1/20;
     colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
-    } //End Constructor
+  } //End Constructor
   //
   void draw() { //ball
     fill(colour);
-    ellipse(x, y, diameter, diameter);
+    ellipse(x, y, diameter, diameter); 
     fill(0);
   }//End draw
   //
