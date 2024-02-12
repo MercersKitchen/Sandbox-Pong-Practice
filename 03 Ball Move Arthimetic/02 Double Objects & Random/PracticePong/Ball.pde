@@ -23,8 +23,9 @@ class Ball
     colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
     xSpeed = 1; //float, could be any number
     ySpeed = 1; //float, could be any number
-    xDirection = -1; //float, could be any number
-    yDirection = -1; //float, could be any number
+    //ERROR: random() will choose ZERO, not only -1 & 1
+    xDirection = int (random (-1, 1) ); //float, truncated, must be 2 minimum
+    yDirection = int (random (-1, 1) ); //float, truncated, must be 2 minimum
   } //End Constructor
   //
   void draw() { //ball
