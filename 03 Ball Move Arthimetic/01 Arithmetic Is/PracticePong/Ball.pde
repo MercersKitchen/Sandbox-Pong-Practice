@@ -18,12 +18,21 @@ class Ball
     y = startY;
     diameter = referentMeasure * 1/20;
     colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
+    xSpeed = 1;
+    ySpeed = 1;
   } //End Constructor
   //
   void draw() { //ball
     fill(colour);
-    ellipse(x, y, diameter, diameter); 
+    ellipse(x, y, diameter, diameter);
     fill(0);
+    //
+    step();
   }//End draw
+  //
+  void step() {
+    x += xSpeed;
+    y += ySpeed;
+  } //End step
   //
 } //End Ball
