@@ -1,3 +1,6 @@
+/* Known ERRORs
+- Night Mode: Ball Colour
+*/
 class Ball
 {
   //Global Variables
@@ -37,8 +40,8 @@ class Ball
     y += ySpeed;
   } //End step
   void bounce() {
-    if ( x < 0 || x > width ) xSpeed *= xDirection;
-    if ( y < 0 || y > height ) ySpeed *= yDirection;
+    if ( x < 0+(diameter*1/2) || x > width-(diameter*1/2) ) xSpeed *= xDirection;
+    if ( y < 0+(diameter*1/2) || y > height-(diameter*1/2) ) ySpeed *= yDirection;
   } //End bounce
   //
 } //End Ball
