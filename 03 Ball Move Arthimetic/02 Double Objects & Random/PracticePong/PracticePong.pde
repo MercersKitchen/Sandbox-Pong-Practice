@@ -2,7 +2,7 @@
 Ball myBall; // Both 1/2's of Constructor
 //Ball yourBall
 //
-color pongTableColour; //ERROR: move to Table CLASS
+color pongTableColour = 255; //ERROR: move to Table CLASS, 255 is full BLUE
 //
 void setup() {
   size(600, 400); //fullScreen(); displayWidth, displayHeight
