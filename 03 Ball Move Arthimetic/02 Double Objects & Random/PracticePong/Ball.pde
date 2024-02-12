@@ -1,5 +1,5 @@
 /* Known ERRORs
-- Night Mode: Ball Colour
+- Night Mode: Ball Colour is Full BLUE
 */
 class Ball
 {
