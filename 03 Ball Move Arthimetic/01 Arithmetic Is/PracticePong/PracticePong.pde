@@ -15,7 +15,6 @@ void setup() {
 //
 void draw() {
   myBall.draw();
-  println(myBall.x, myBall.y);
 } //End draw
 //
 void keyPressed() {
