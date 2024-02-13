@@ -1,6 +1,6 @@
 /* Known ERRORs
-- Night Mode: Ball Colour is Full BLUE
-*/
+ - Night Mode: Ball Colour is Full BLUE
+ */
 class Ball
 {
   //Global Variables
@@ -24,13 +24,27 @@ class Ball
     xSpeed = 1; //float, could be any number
     ySpeed = 1; //float, could be any number
     //ERROR: random() will choose ZERO, not only -1 & 1
-    xDirection = int (random (-1, 1) ); //float, truncated, must be 2 minimum
-    yDirection = int (random (-1, 1) ); //float, truncated, must be 2 minimum
+    xDirection = xDirection();
+    yDirection = yDirection();
   } //End Constructor
   //
+  float xDirection() {
+    float xDirection = int (random (-2, 2) ); //float, truncated, must be 2 minimum
+    while ( xDirection == 0 ) {
+      xDirection = int (random (-2, 2) ); //variable must be populated first
+    }
+    return xDirection;
+  } //End xDirection
+  float yDirection() {
+    float YDirection = int (random (-2, 2) ); //float, truncated, must be 2 minimum
+    while ( xDirection == 0 ) {
+      YDirection = int (random (-2, 2) ); //variable must be populated first
+    }
+    return yDirection;
+  } //End Direction
   void draw() { //ball
     fill(colour);
-    ellipse(x, y, diameter, diameter);
+    ellipse(x, y, diameter, diameter); //Easter Egg: at bounce diameters changes
     fill(0);
     //
     step();
