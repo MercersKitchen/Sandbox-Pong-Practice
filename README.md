@@ -45,4 +45,6 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 # To Include: 
 - Introductory Objects
 
+- Do not do ball collisions until later
+
 ---
