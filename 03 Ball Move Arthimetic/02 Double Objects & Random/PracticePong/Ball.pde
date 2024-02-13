@@ -6,7 +6,7 @@ class Ball
   //Global Variables
   float x, y, diameter;
   color colour;
-  float xSpeed, ySpeed, xDirection, yDirection;
+  float xSpeed, ySpeed, xSpeedChange, ySpeedChange;
   //
   //Constructor
   Ball () {
@@ -24,8 +24,8 @@ class Ball
     xSpeed = xDirection(); //float, could be any number
     ySpeed = yDirection(); //float, could be any number
     //ERROR: random() will choose ZERO, not only -1 & 1
-    xDirection = 1;
-    yDirection = 1;
+    xSpeedChange = 1; //Break bounce physisc
+    ySpeedChange = 1; //Change speeds
   } //End Constructor
   //
   float xDirection() {
@@ -51,8 +51,8 @@ class Ball
   }//End draw
   void step() {
     bounce();
-    x += xSpeed;
-    y += ySpeed;
+    x += xSpeed * xSpeedChange;
+    y += ySpeed * ySpeedChange;
   } //End step
   void bounce() {
     if ( x < 0+(diameter*1/2) || x > width-(diameter*1/2) ) xSpeed *= -1;
