@@ -19,6 +19,11 @@ void draw() {
   background(pongTableColour); //ERROR: Night Mode is know in CLASS, not DRIVER
   myBall.draw();
   yourBall.draw();
+  if ( abs(myBall.x-yourBall.x) < ( (myBall.diameter)+(yourBall.diameter) ) || abs(myBall.y-yourBall.y) < ( (myBall.diameter)+(yourBall.diameter) ) ) {
+    if ( abs(myBall.x-yourBall.x) < ( (myBall.diameter)+(yourBall.diameter) ) || abs(myBall.y-yourBall.y) < ( (myBall.diameter)+(yourBall.diameter) ) ) ballCollisions();
+  }
+
+  println ( myBall.x, yourBall.x, myBall.y, yourBall.y );
 } //End draw
 //
 void keyPressed() {
@@ -28,10 +33,14 @@ void mousePressed() {
 } //End mousePressed
 //
 void ballCollisions() {
-  /*Change this code to instances
-   if ( x < 0+(diameter*1/2) || x > width-(diameter*1/2) ) xSpeed *= -1;
-   if ( y < 0+(diameter*1/2) || y > height-(diameter*1/2) ) ySpeed *= -1;
-   */
+  if ( abs(myBall.x-yourBall.x) <= ( (myBall.diameter*1/2)+(yourBall.diameter*1/2) ) ) {
+    myBall.xSpeed *= -1;
+    yourBall.xSpeed *= -1;
+  }
+  if ( abs(myBall.y-yourBall.y) <= ( (myBall.diameter*1/2)+(yourBall.diameter*1/2) ) ) {
+    myBall.ySpeed *= -1;
+    yourBall.ySpeed *= -1;
+  }
 } //End ball collisions
 //
 //End DRIVER
