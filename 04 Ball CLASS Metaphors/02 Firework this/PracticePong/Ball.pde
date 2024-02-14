@@ -28,17 +28,20 @@ class Ball
     //ERROR: random() will choose ZERO, not only -1 & 1
     this.xSpeedChange = 1; //Break bounce physics
     this.ySpeedChange = 1; //Change speeds
+    gravity=0.0;
   } //End Ball Constructor
   //
   // Mulitple Constructors by identifying different parameters
   Ball (float gravityParameter) {
     //Ball(); //Place Holder
-    x = mouseX; //ERROR: trigger when the Ball enters goal area
-    y = mouseY; //ERROR: trigger when the Ball enters goal area
-    colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
-    diameter = random(width*1/25);
-    xSpeed = random(-5, 5);
-    ySpeed = random(-5, 5);
+    this.x = mouseX; //ERROR: trigger when the Ball enters goal area
+    this.y = mouseY; //ERROR: trigger when the Ball enters goal area
+    this.colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
+    this.diameter = random(width*1/25);
+    this.xSpeed = random(-5, 5);
+    this.ySpeed = random(-5, 5);
+    this.xSpeedChange = 1; //Break bounce physics
+    this.ySpeedChange = 1; //Change speeds
     gravity = gravityParameter;
   } //End Firework Ball
   //
@@ -65,6 +68,7 @@ class Ball
   }//End draw
   void step() {
     bounce();
+    ySpeed += gravity;
     x += xSpeed * xSpeedChange;
     y += ySpeed * ySpeedChange;
   } //End step
