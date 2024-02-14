@@ -6,11 +6,12 @@ class Ball
   //Global Variables
   float x, y, diameter;
   color colour;
-  float xSpeed, ySpeed, xSpeedChange, ySpeedChange;
+  float xSpeed, ySpeed, xSpeedChange=1.0, ySpeedChange=1.0;
   float gravity=0.0;
   //static int count = 25; //Static Number for Amount of Ball Instances in a Firework
   //
-  //Ball Constructor
+  //Overloading Constructors or Mulitple Constructors
+  //Ball Constructor, no parameters
   Ball () {
     //Constructor Is ... hard coded, single variable object
     //Local Variables, deleted at end of Constructor
@@ -31,10 +32,10 @@ class Ball
   } //End Ball Constructor
   //
   // Mulitple Constructors by identifying different parameters
-  Ball (float gravityParameter) {
+  Ball (float x, float y, float gravityParameter) {
     //Ball(); //Place Holder
-    x = mouseX; //ERROR: trigger when the Ball enters goal area
-    y = mouseY; //ERROR: trigger when the Ball enters goal area
+    x = x; //ERROR: trigger when the Ball enters goal area
+    y = y; //ERROR: trigger when the Ball enters goal area
     colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
     diameter = random(width*1/25);
     xSpeed = random(-5, 5);

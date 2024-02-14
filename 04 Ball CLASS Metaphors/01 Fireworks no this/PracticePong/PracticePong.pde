@@ -12,7 +12,7 @@ void setup() {
   //Population
   myBall = new Ball(); // Both 1/2's of Constructor
   for (int i=0; i < fireworks.length; i++) {
-    fireworks[i] = new Ball(0.5);
+    fireworks[i] = new Ball( width*-1, height*-1, 0.5);
   }
   
   //
@@ -31,7 +31,7 @@ void keyPressed() {
 //
 void mousePressed() {
   for (int i=0; i < fireworks.length; i++) {
-    fireworks[i] = new Ball(0.5);
+    fireworks[i] = new Ball(mouseX, mouseY, 0.5);
   }
 } //End mousePressed
 //

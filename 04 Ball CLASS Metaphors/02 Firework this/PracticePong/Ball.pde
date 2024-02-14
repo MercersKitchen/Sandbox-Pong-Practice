@@ -6,8 +6,8 @@ class Ball
   //Global Variables
   float x, y, diameter;
   color colour;
-  float xSpeed, ySpeed, xSpeedChange, ySpeedChange;
-  float gravity;
+  float xSpeed, ySpeed, xSpeedChange=1.0, ySpeedChange=1.0;
+  float gravity=0.0;
   //static int count = 25; //Static Number for Amount of Ball Instances in a Firework
   //
   //Ball Constructor
@@ -26,22 +26,19 @@ class Ball
     this.xSpeed = xDirection(); //float, could be any number
     this.ySpeed = yDirection(); //float, could be any number
     //ERROR: random() will choose ZERO, not only -1 & 1
-    this.xSpeedChange = 1; //Break bounce physics
-    this.ySpeedChange = 1; //Change speeds
-    gravity=0.0;
+    this.xSpeedChange = 1.0; //Break bounce physics
+    this.ySpeedChange = 1.0; //Change speeds
   } //End Ball Constructor
   //
   // Mulitple Constructors by identifying different parameters
-  Ball (float gravityParameter) {
+  Ball (float x, float y, float gravityParameter) {
     //Ball(); //Place Holder
-    this.x = mouseX; //ERROR: trigger when the Ball enters goal area
-    this.y = mouseY; //ERROR: trigger when the Ball enters goal area
+    this.x = x; //ERROR: trigger when the Ball enters goal area
+    this.y = y; //ERROR: trigger when the Ball enters goal area
     this.colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
     this.diameter = random(width*1/25);
     this.xSpeed = random(-5, 5);
     this.ySpeed = random(-5, 5);
-    this.xSpeedChange = 1; //Break bounce physics
-    this.ySpeedChange = 1; //Change speeds
     gravity = gravityParameter;
   } //End Firework Ball
   //
