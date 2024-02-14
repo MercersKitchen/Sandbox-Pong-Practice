@@ -34,13 +34,12 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 # To Include: URLs
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_An-Object-Is
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Constructor/tree/main
-- [Almost DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Progressions-of-Arithemtic
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong_Ball-Class-Instances/tree/main
+- [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Progressions-of-Arithemtic
+- [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Ball-Class-Instances/tree/main
+- [Almost DELETE]https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Ball-Class-Metaphor/tree/main
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion/tree/main
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong-OOP-Ball-Class-Constant-Slope
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
-
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Ball-Class-Metaphor/tree/main
 
 # To Include: 
 - Introductory Objects
