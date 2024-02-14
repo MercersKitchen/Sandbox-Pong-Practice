@@ -1,6 +1,6 @@
 //Global Variables and Objects
 Ball myBall;
-Ball[] fireworks = new Firework[25];
+Ball[] fireworks = new Ball[25];
 //
 color pongTableColour = 255; //ERROR: move to Table CLASS, 255 is full BLUE
 //
@@ -12,7 +12,7 @@ void setup() {
   //Population
   myBall = new Ball(); // Both 1/2's of Constructor
   for (int i=0; i < fireworks.length; i++) {
-    fireworks[i] = new Firework();
+    fireworks[i] = new Ball(0.5);
   }
   
   //
@@ -31,7 +31,7 @@ void keyPressed() {
 //
 void mousePressed() {
   for (int i=0; i < fireworks.length; i++) {
-    fireworks[i] = new Firework();
+    fireworks[i] = new Ball(0.5);
   }
 } //End mousePressed
 //

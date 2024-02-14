@@ -30,8 +30,8 @@ class Ball
     this.ySpeedChange = 1; //Change speeds
   } //End Ball Constructor
   //
-  // Mulitple Constructors
-  Firework () {
+  // Mulitple Constructors by identifying different parameters
+  Ball (float gravityParameter) {
     //Ball(); //Place Holder
     x = mouseX; //ERROR: trigger when the Ball enters goal area
     y = mouseY; //ERROR: trigger when the Ball enters goal area
@@ -39,7 +39,7 @@ class Ball
     diameter = random(width*1/25);
     xSpeed = random(-5, 5);
     ySpeed = random(-5, 5);
-    gravity = 0.5;
+    gravity = gravityParameter;
   } //End Firework Ball
   //
   float xDirection() {
