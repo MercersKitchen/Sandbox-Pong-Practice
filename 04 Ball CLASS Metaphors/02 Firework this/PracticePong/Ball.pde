@@ -10,6 +10,7 @@ class Ball
   float gravity=0.0;
   //static int count = 25; //Static Number for Amount of Ball Instances in a Firework
   //
+  //Overloading Constructors or Mulitple Constructors
   //Ball Constructor
   Ball () {
     //Constructor Is ... hard coded, single variable object
