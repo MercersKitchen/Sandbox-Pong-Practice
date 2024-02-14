@@ -37,6 +37,10 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Progressions-of-Arithemtic
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Ball-Class-Instances/tree/main
 - [Almost DELETE]https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Ball-Class-Metaphor/tree/main
+- Freworks done
+- Magnet? v3
+- Black hole
+- Chase in a straight line
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion/tree/main
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong-OOP-Ball-Class-Constant-Slope
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
