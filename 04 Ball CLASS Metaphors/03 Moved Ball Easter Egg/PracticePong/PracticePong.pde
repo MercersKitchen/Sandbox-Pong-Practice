@@ -37,12 +37,16 @@ void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
+  //
+  // See ball.bounce() for IF Conditional
+  // myBall.diameter sets all Pong Ball Diameters
+  // if ( mouseX < 0+(myBall.diameter*1/2) || mouseX > width-(myBall.diameter*1/2) ) {}
   for (int i=0; i < fireworks.length; i++) {
     fireworks[i] = new Ball(mouseX, mouseY, 0.5);
   }
   movedBall = new Ball(mouseX, mouseY, myBall.diameter, myBall.colour, myBall.xSpeed, myBall.ySpeed, myBall.xSpeedChange, myBall.ySpeedChange);
   //CAUTION: only brings forth myBall, not last known movedBall
-  //Note: .draw is not being executed so 
+  //Note: .draw is not being executed so
   //myBall.disappear = true;
 } //End mousePressed
 //
