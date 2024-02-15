@@ -14,8 +14,6 @@ void setup() {
   for (int i=0; i < fireworks.length; i++) {
     fireworks[i] = new Ball(width*-1, height*-1, 0.5);
   }
-  
-  //
 } //End setup
 //
 void draw() {

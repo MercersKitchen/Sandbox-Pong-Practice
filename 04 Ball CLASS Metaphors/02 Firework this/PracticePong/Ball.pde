@@ -32,10 +32,10 @@ class Ball
   } //End Ball Constructor
   //
   // Mulitple Constructors by identifying different parameters
-  Ball (float x, float y, float gravityParameter) {
+  Ball (float xParameter, float yParameter, float gravityParameter) {
     //Ball(); //Place Holder
-    this.x = x; //ERROR: trigger when the Ball enters goal area
-    this.y = y; //ERROR: trigger when the Ball enters goal area
+    this.x = xParameter; //ERROR: trigger when the Ball enters goal area
+    this.y = yParameter; //ERROR: trigger when the Ball enters goal area
     this.colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
     this.diameter = random(width*1/25);
     this.xSpeed = random(-5, 5);
@@ -62,11 +62,11 @@ class Ball
     ellipse(x, y, diameter, diameter); //Easter Egg: at bounce diameters changes
     fill(0);
     //
-    step();
+    step(); //Manipulating the Variables
   }//End draw
   void step() {
     bounce();
-    ySpeed += gravity;
+    ySpeed += gravity; //Ball() is not affected, thus Pong Ball has no gravity
     x += xSpeed * xSpeedChange;
     y += ySpeed * ySpeedChange;
   } //End step
