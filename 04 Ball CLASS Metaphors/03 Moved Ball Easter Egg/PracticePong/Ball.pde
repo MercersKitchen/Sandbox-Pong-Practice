@@ -8,6 +8,7 @@ class Ball
   color colour;
   float xSpeed, ySpeed, xSpeedChange=1.0, ySpeedChange=1.0;
   float gravity=0.0;
+  Boolean disappear=false;
   //static int count = 25; //Static Number for Amount of Ball Instances in a Firework
   //
   //Overloading Constructors or Mulitple Constructors
@@ -42,6 +43,19 @@ class Ball
     this.ySpeed = random(-5, 5); //Can return 0
     gravity = gravityParameter;
   } //End Firework Ball
+  //
+  //Overloaded Constructor, Moved Ball Constructor
+  //  Must look like old Ball Instance and make Old  Ball Instance disappear
+  Ball(float xParameter, float yParameter, float diameterParameter, color colourParameter, float xSpeedParameter, float ySpeedParameter, float xSpeedChangeParameter, float ySpeedChangeParameter) {
+    this.x = xParameter; //spawn myBall in the middle of the display
+    this.y = yParameter;
+    this.diameter = diameterParameter;
+    this.colour = colourParameter;
+    this.xSpeed = xSpeedParameter;
+    this.ySpeed = ySpeedParameter;
+    this.xSpeedChange = xSpeedChangeParameter;
+    this.ySpeedChange = ySpeedChangeParameter;
+  } //End Moved Ball Constructor
   //
   float xDirection() {
     float xDirection = int (random (-2, 2) ); //float, truncated, must be 2 minimum
