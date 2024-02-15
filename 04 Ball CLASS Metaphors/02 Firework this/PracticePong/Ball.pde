@@ -37,9 +37,9 @@ class Ball
     this.x = xParameter; //ERROR: trigger when the Ball enters goal area
     this.y = yParameter; //ERROR: trigger when the Ball enters goal area
     this.colour = color ( random(0, 255), random(255), random(255) ) ; //random(), random()-shortcut, casting from float to intin color var
-    this.diameter = random(width*1/25);
-    this.xSpeed = random(-5, 5);
-    this.ySpeed = random(-5, 5);
+    this.diameter = random(width*1/25); //returns unseen diamters
+    this.xSpeed = random(-5, 5); //Can return 0
+    this.ySpeed = random(-5, 5); //Can return 0
     gravity = gravityParameter;
   } //End Firework Ball
   //
