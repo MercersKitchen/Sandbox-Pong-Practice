@@ -17,9 +17,12 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [x] Define Ball-class
 - [ ] Explore Constructor-in-Driver & Constructor-encapsulated
   - Various Ways of Interpreting Object Constructors
+- [ ] Explore Overloaded Constructors & Conceptualizing Ball Class
 - [ ] 
 
-- [ ] 
+- [ ] OPTIONAL, Advanced: ball collisions & the physics of conservation of momentum in two dimensions (is a phsysics lesson using right triangles)
+
+
 ### Additions to Programs
 - CLASS: global variables, local variables, primitive variables, variables "bigger" than primitive
 
@@ -27,6 +30,7 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 ### Reminders for Introductory Objects
 - Getters and Setters
 - toString() methods
+- When variables are needed by other CLASSES' Code for operation
 
 
 ---
