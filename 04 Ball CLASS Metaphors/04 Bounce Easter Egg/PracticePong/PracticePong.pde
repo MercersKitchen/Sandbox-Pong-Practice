@@ -29,7 +29,8 @@ void draw() {
   }
   // Trigger: Left Goal, Right Goal
   // ERROR: Ball Instance still bounces
-  if ( myBall.x<(2*myBall.diameter) || myBall.x>( width - (2*myBall.diameter) ) ) {} //GOAL! Firework Constructor Execution, based on X-value
+  movedBall
+  if ( myBall.x<(2*myBall.diameter) || myBall.x>( width - (2*myBall.diameter) ) || movedBall.x<(2*movedBall.diameter) || movedBall.x>( width - (2*movedBall.diameter) ) ) {} //GOAL! Firework Constructor Execution, based on X-value
   for (int i=0; i < fireworks.length; i++) {
     fireworks[i].draw();
   }
