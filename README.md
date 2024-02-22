@@ -17,6 +17,7 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [x] Define Ball-class
 - [ ] Explore Constructor-in-Driver & Constructor-encapsulated
   - Various Ways of Interpreting Object Constructors
+  - Encapsulating a Constructor in it's own Class ("Net Explosion")
 - [ ] Explore Overloaded Constructors & Conceptualizing Ball Class
 - [ ] 
 
