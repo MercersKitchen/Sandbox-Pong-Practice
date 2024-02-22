@@ -29,8 +29,13 @@ void draw() {
   }
   // Trigger: Left Goal, Right Goal
   // ERROR: Ball Instance still bounces
-  movedBall
-  if ( myBall.x<(2*myBall.diameter) || myBall.x>( width - (2*myBall.diameter) ) || movedBall.x<(2*movedBall.diameter) || movedBall.x>( width - (2*movedBall.diameter) ) ) {} //GOAL! Firework Constructor Execution, based on X-value
+  if ( myBall.x<(2*myBall.diameter) || myBall.x>( width - (2*myBall.diameter) ) || movedBall.x<(2*movedBall.diameter) || movedBall.x>( width - (2*movedBall.diameter) ) ) {
+    // See ball.bounce() for IF Conditional
+    // myBall.diameter sets all Pong Ball Diameters
+    // if ( mouseX < 0+(myBall.diameter*1/2) || mouseX > width-(myBall.diameter*1/2) ) {}
+    if ( myBall.x<(2*myBall.diameter) || myBall.x>( width - (2*myBall.diameter) ) ) netExplosion(  myBall.x, myBall.y );
+    if ( movedBall.x<(2*movedBall.diameter) || movedBall.x>( width - (2*movedBall.diameter) ) ) netExplosion(  movedBall.x, movedBall.y );
+  } //GOAL! Firework Constructor Execution, based on X-value
   for (int i=0; i < fireworks.length; i++) {
     fireworks[i].draw();
   }
@@ -42,12 +47,7 @@ void keyPressed() {
 //
 void mousePressed() {
   //
-  // See ball.bounce() for IF Conditional
-  // myBall.diameter sets all Pong Ball Diameters
-  // if ( mouseX < 0+(myBall.diameter*1/2) || mouseX > width-(myBall.diameter*1/2) ) {}
-  for (int i=0; i < fireworks.length; i++) {
-    fireworks[i] = new Ball(mouseX, mouseY, 0.5);
-  }
+
   movedBall = new Ball(mouseX, mouseY, myBall.diameter, myBall.colour, myBall.xSpeed, myBall.ySpeed, myBall.xSpeedChange, myBall.ySpeedChange);
   //CAUTION: only brings forth myBall, not last known movedBall
   //Note: .draw is not being executed so
