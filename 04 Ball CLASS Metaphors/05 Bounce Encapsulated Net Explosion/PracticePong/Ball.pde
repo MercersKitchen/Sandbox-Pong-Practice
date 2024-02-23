@@ -44,7 +44,7 @@ class Ball
     gravity = gravityParameter;
   } //End Firework Ball
   //
-  //Overloaded Constructor, Moved Ball Constructor
+  // Overloaded Constructor, Moved Ball Constructor
   //  Must look like old Ball Instance and make Old  Ball Instance disappear
   Ball(float xParameter, float yParameter, float diameterParameter, color colourParameter, float xSpeedParameter, float ySpeedParameter, float xSpeedChangeParameter, float ySpeedChangeParameter) {
     this.x = xParameter; //spawn myBall in the middle of the display
@@ -77,8 +77,6 @@ class Ball
     fill(0);
     //
     step(); //Manipulating the Variables
-    //
-    if ( netExplosion==true ) goal(); //Net Explosion
   }//End draw
   void step() {
     bounce();
@@ -90,13 +88,10 @@ class Ball
     if ( x < 0+(diameter*1/2) || x > width-(diameter*1/2) ) xSpeed *= -1;
     if ( y < 0+(diameter*1/2) || y > height-(diameter*1/2) ) ySpeed *= -1;
   } //End bounce
-  void netExplosion() {
-    //Capture X & Y Varaibles, send new gravity
-    netExplosion = true;
-  } //End netExplosion
-  void goal() {
-    //
-    netExplosion = false;
+  void goalExplosion(float xParameter, float yParamter, float gravityParameter) {
+    for (int i=0; i < fireworks.length; i++) {
+      fireworks[i] = new Ball(xParameter, yParamter, gravity);
+    }
   } //End goal
   //
 } //End Ball
