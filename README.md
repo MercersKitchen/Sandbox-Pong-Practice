@@ -14,25 +14,33 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 # To Do List
 - [x] Difference between a class object, an instance, and a visual object
-- [x] Define Ball-class
-- [ ] Explore Constructor-in-Driver & Constructor-encapsulated
+- [x] Define Ball-class: start with primitive variables
+  - for example: global variables, local variables, primitive variables, variables "bigger" than primitive
+- [x] Explore Constructor-in-Driver & Constructor-encapsulated
+  - What is a constructor: Population, access methods to populate
+  - Using a Constructor to create a group of instances for one effect: fireworks for a goal (example easter egg)
   - Explore Overloaded Constructors & Conceptualizing Ball Class
   - Various Ways of Interpreting Object Constructors
   - Encapsulating a Constructor in it's own Class ("Net Explosion")
   - SOVLED URL: https://github.com/Advanced-App-Dev-and-Deploy/Pong-Hackathon-SOLVED
-- [ ] 
-- [ ] 
+- [ ] Exploring some fun metaphors
+  - 
+- [ ] Creatign a New Class: Pong Rackets, left and right
+  - Shape, bouncable dimensions, separation from goal trigger
+  - Pong Rackets are just a rectable or player ... the racket knows the score
+- [ ] Communciation between instances
 
 - [ ] OPTIONAL, Advanced: ball collisions & the physics of conservation of momentum in two dimensions (is a phsysics lesson using right triangles)
 
 
 ### Additions to Programs
-- CLASS: global variables, local variables, primitive variables, variables "bigger" than primitive
+- CLASS: 
 
 - 
 ### Reminders for Introductory Objects
 - Getters and Setters
 - toString() methods
+- Public and Private Methods, other methods
 - When variables are needed by other CLASSES' Code for operation
 
 
@@ -53,8 +61,6 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
 
 # To Include: 
-- Introductory Objects
-
 - Do not do ball collisions until later
 
 ---
