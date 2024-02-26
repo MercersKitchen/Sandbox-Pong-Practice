@@ -16,9 +16,11 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [x] Difference between a class object, an instance, and a visual object
 - [x] Define Ball-class
 - [ ] Explore Constructor-in-Driver & Constructor-encapsulated
+  - Explore Overloaded Constructors & Conceptualizing Ball Class
   - Various Ways of Interpreting Object Constructors
   - Encapsulating a Constructor in it's own Class ("Net Explosion")
-- [ ] Explore Overloaded Constructors & Conceptualizing Ball Class
+  - SOVLED URL: https://github.com/Advanced-App-Dev-and-Deploy/Pong-Hackathon-SOLVED
+- [ ] 
 - [ ] 
 
 - [ ] OPTIONAL, Advanced: ball collisions & the physics of conservation of momentum in two dimensions (is a phsysics lesson using right triangles)
