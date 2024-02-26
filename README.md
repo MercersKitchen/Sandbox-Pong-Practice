@@ -23,8 +23,12 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - Various Ways of Interpreting Object Constructors
   - Encapsulating a Constructor in it's own Class ("Net Explosion")
   - SOVLED URL: https://github.com/Advanced-App-Dev-and-Deploy/Pong-Hackathon-SOLVED
+  - Reminder: Fireworks metaphor changes the experience of phsyics to signal the game stops and a celebration happens
 - [ ] Exploring some fun metaphors
-  - 
+  - Stars: ball bounces off small stars created (i.e. like pinball)
+  - Night Ski Metaphor
+  - Chase
+  - Blackhole
 - [ ] Creatign a New Class: Pong Rackets, left and right
   - Shape, bouncable dimensions, separation from goal trigger
   - Pong Rackets are just a rectable or player ... the racket knows the score
@@ -58,6 +62,7 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion/tree/main
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong-OOP-Ball-Class-Constant-Slope
 - https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
+- https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion
 
 # To Include: 
 - Do not do ball collisions until later
