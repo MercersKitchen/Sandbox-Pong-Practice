@@ -34,9 +34,8 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 
 ### Additions to Programs
-- CLASS: 
 
-- 
+
 ### Reminders for Introductory Objects
 - Getters and Setters
 - toString() methods
