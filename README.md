@@ -54,7 +54,6 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 # To Include: URLs
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Ball-Class-Instances/tree/main
-- [DELETE]https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Ball-Class-Metaphor/tree/main
 - [Public REpo for Everything, points to private repo too] https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
 - [Private Repo for Teaching] https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion
 
