@@ -24,6 +24,7 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - [x] Various Ways of Interpreting Object Constructors
   - [x] Encapsulating a Constructor in it's own Class ("Net Explosion")
   - [x] SOVLED URL: https://github.com/Advanced-App-Dev-and-Deploy/Pong-Hackathon-SOLVED
+	- https://github.com/Advanced-App-Dev-and-Deploy/Pong-OOP-Ball-Class-Constant-Slope
   - [x] Reminder: Fireworks metaphor changes the experience of phsyics to signal the game stops and a celebration happens
 - [x] Exploring some fun metaphors
   - [x] Stars: ball bounces off small stars created (i.e. like pinball)
@@ -56,15 +57,9 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Constructor/tree/main
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Progressions-of-Arithemtic
 - [DELETE] https://github.com/Advanced-App-Dev-and-Deploy/Pong_Ball-Class-Instances/tree/main
-- [Almost DELETE]https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Ball-Class-Metaphor/tree/main
-- Freworks done
-- Magnet? v3
-- Black hole
-- Chase in a straight line
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion/tree/main
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong-OOP-Ball-Class-Constant-Slope
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
-- https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion
+- [DELETE]https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Ball-Class-Metaphor/tree/main
+- [Public REpo for Everything, points to private repo too] https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes/tree/main
+- [Private Repo for Teaching] https://github.com/Advanced-App-Dev-and-Deploy/Pong_GUI-Classes-_TeachingVersion
 
 # To Include: 
 - Do not do ball collisions until later
