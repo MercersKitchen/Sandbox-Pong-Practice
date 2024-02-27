@@ -28,10 +28,11 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - Stars: ball bounces off small stars created (i.e. like pinball)
   - Night Sky Metaphor, Pong Ball may bounce off tiny stars
   - Chase Metaphor for Stars in the Knight-time Sky
-  - Blackhole, Collapses all stars
-- [ ] Creatign a New Class: Pong Rackets, left and right
-  - Shape, bouncable dimensions, separation from goal trigger
-  - Pong Rackets are just a rectable or player ... the racket knows the score
+  - [ ] Blackhole, Collapses all stars
+- [ ] Creatign a New Class: Pong Rackets, left and right, Pong Table, Pong Scoreboard associated with left and right paddles
+  - [ ] Shape, bouncable dimensions, separation from goal trigger
+  - [ ] Paddle will not move off the table
+  - [ ] Pong Rackets are just a rectable or player ... the racket knows the score
 - [ ] Communciation between instances
 
 - [ ] OPTIONAL, Advanced: ball collisions & the physics of conservation of momentum in two dimensions (is a phsysics lesson using right triangles)
