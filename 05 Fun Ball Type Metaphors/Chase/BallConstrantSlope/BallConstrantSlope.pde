@@ -1,10 +1,14 @@
 // Global Variables and Objects
 Ball ball;
-
+int appWidth, appHeight, smallerDimension;
+//
 void setup() {
-  fullScreen(); //displayWidth & displayHeight  //size(500, 300)
+  size(600, 400); //fullScreen(); //displayWidth & displayHeight
+  appWidth = width;
+  appHeight = height;
+  smallerDimension = ( appWidth <= appHeight ) ? appWidth : appHeight;
   // Landscape vs. portrait views, leads to screenSize Checker
-  ball = new Ball(displayWidth*1/2, displayHeight*1/3, displayWidth*1/8.33333333);
+  ball = new Ball(appWidth*1/2, appHeight*1/3, smallerDimension*1/8.33333333);
   //
 }//End setup()
 
@@ -17,6 +21,6 @@ void keyPressed () { // Review KeyBoard Input
 }
 
 void mousePressed() { // Review mouseX and mouseY Key Variables and curser position input
-ball.targetX = mouseX;
-ball.targetY = mouseY;
+  ball.targetX = mouseX;
+  ball.targetY = mouseY;
 }
