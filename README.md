@@ -26,9 +26,9 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - Reminder: Fireworks metaphor changes the experience of phsyics to signal the game stops and a celebration happens
 - [ ] Exploring some fun metaphors
   - Stars: ball bounces off small stars created (i.e. like pinball)
-  - Night Ski Metaphor
-  - Chase
-  - Blackhole
+  - Night Sky Metaphor, Pong Ball may bounce off tiny stars
+  - Chase Metaphor for Stars in the Knight-time Sky
+  - Blackhole, Collapses all stars
 - [ ] Creatign a New Class: Pong Rackets, left and right
   - Shape, bouncable dimensions, separation from goal trigger
   - Pong Rackets are just a rectable or player ... the racket knows the score
