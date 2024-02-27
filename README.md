@@ -15,20 +15,21 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 # To Do List
 - [x] Difference between a class object, an instance, and a visual object
 - [x] Define Ball-class: start with primitive variables
-  - for example: global variables, local variables, primitive variables, variables "bigger" than primitive
+  - [x] for example: global variables, local variables, primitive variables, variables "bigger" than primitive
+  - [x] difference between Driver-Global-Variables & Class-Global-Variables
 - [x] Explore Constructor-in-Driver & Constructor-encapsulated
-  - What is a constructor: Population, access methods to populate
-  - Using a Constructor to create a group of instances for one effect: fireworks for a goal (example easter egg)
-  - Explore Overloaded Constructors & Conceptualizing Ball Class
-  - Various Ways of Interpreting Object Constructors
-  - Encapsulating a Constructor in it's own Class ("Net Explosion")
-  - SOVLED URL: https://github.com/Advanced-App-Dev-and-Deploy/Pong-Hackathon-SOLVED
-  - Reminder: Fireworks metaphor changes the experience of phsyics to signal the game stops and a celebration happens
-- [ ] Exploring some fun metaphors
-  - Stars: ball bounces off small stars created (i.e. like pinball)
-  - Night Sky Metaphor, Pong Ball may bounce off tiny stars
-  - Chase Metaphor for Stars in the Knight-time Sky
-  - [ ] Blackhole, Collapses all stars
+  - [x] What is a constructor: Population, access methods to populate
+  - [x] Using a Constructor to create a group of instances for one effect: fireworks for a goal (example easter egg)
+  - [x] Explore Overloaded Constructors & Conceptualizing Ball Class
+  - [x] Various Ways of Interpreting Object Constructors
+  - [x] Encapsulating a Constructor in it's own Class ("Net Explosion")
+  - [x] SOVLED URL: https://github.com/Advanced-App-Dev-and-Deploy/Pong-Hackathon-SOLVED
+  - [x] Reminder: Fireworks metaphor changes the experience of phsyics to signal the game stops and a celebration happens
+- [x] Exploring some fun metaphors
+  - [x] Stars: ball bounces off small stars created (i.e. like pinball)
+  - [x] Night Sky Metaphor, Pong Ball may bounce off tiny stars
+  - [x] Chase Metaphor for Stars in the Knight-time Sky
+  - [x] Blackhole, Collapses all stars
 - [ ] Creatign a New Class: Pong Rackets, left and right, Pong Table, Pong Scoreboard associated with left and right paddles
   - [ ] Shape, bouncable dimensions, separation from goal trigger
   - [ ] Paddle will not move off the table
