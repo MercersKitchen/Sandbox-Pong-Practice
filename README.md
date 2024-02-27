@@ -32,6 +32,9 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - [x] Chase Metaphor for Stars in the Knight-time Sky
   - [x] Blackhole, Collapses all stars
 - [ ] Creatign a New Class: Pong Rackets, left and right, Pong Table, Pong Scoreboard associated with left and right paddles
+  - [ ] Pong Table
+  - [ ] Net's in the Table
+  - [ ] Pong Paddle on the edge of the table, defending the goal and attaching
   - [ ] Shape, bouncable dimensions, separation from goal trigger
   - [ ] Paddle will not move off the table
   - [ ] Pong Rackets are just a rectable or player ... the racket knows the score
