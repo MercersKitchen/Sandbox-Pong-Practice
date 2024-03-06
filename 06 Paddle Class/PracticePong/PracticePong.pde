@@ -25,6 +25,10 @@ void setup() {
 void draw() {
   background(pongTableColour); //ERROR: Night Mode is know in CLASS, not DRIVER
   //
+  //Paddles drawn before the ball
+  myPaddle ;
+  yourPaddle ;
+  //
   if ( myBall.disappear == true ) {
     //EMPTY IF
     //myBall.step(); //Keeps active the variables but not .draw
