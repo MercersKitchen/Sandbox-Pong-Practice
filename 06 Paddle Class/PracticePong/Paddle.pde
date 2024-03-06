@@ -10,13 +10,18 @@ class Paddle {
   color paddleColour;
   //
   //Overloaded Constructor
-  Paddle (float paddleStartParameter ) {
-    //CAUTION: netX will have the same value
-    if () ; //Adding to the netX
-    if () ; //Subtracting the netX
-    paddleX = netX + ;
-    paddleY = ;
+  //Purpose: left and right paddles
+  Paddle (float paddleStartParameter, float ballDiameterParameter ) {
+    netWidth = ballDiameterParameter * 3;
     paddleWidth = ;
+    //CAUTION: netX will have the same value
+    if ( paddleStartParameter == 0 ) netX = paddleStartParameter; //Adding to the netX
+    if ( paddleStartParameter == width ) {
+      netX = paddleStartParameter - netWidth; //Subtracting the netX
+    }
+    this.paddleX = netX + netWidth;
+    paddleY = ;
+    
     paddleHeight = ;
     paddleColour = ;
     
