@@ -26,8 +26,8 @@ void draw() {
   background(pongTableColour); //ERROR: Night Mode is know in CLASS, not DRIVER
   //
   //Paddles drawn before the ball
-  myPaddle ;
-  yourPaddle ;
+  myPaddle.draw();
+  yourPaddle.draw();
   //
   if ( myBall.disappear == true ) {
     //EMPTY IF
@@ -55,6 +55,10 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
+  if ( key=='W' | key=='w' ) myPaddle;
+  if ( key=='S' | key=='s' ) myPaddle;
+  if ( key==CODED & keyCode==UP ) yourPaddle;
+  if ( key==CODED & keyCode==DOWN ) yourPaddle;
 } //End keyPressed
 //
 void mousePressed() {
