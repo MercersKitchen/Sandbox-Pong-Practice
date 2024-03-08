@@ -1,5 +1,5 @@
 
-Only BOunces off the table top, not the table bottom
+Only Bounces off the table top, not the table bottom
 
 Pong Table Values can be set in Setup, once
 
