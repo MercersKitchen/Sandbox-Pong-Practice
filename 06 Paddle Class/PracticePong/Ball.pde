@@ -9,6 +9,7 @@ class Ball
   float xSpeed, ySpeed, xSpeedChange=1.0, ySpeedChange=1.0;
   float gravity=0.0;
   Boolean disappear=false, netExplosion=false;
+  float tableY;
   //static int count = 25; //Static Number for Amount of Ball Instances in a Firework
   //
   //Overloading Constructors or Mulitple Constructors
@@ -86,7 +87,7 @@ class Ball
   } //End step
   void bounce() {
     if ( x < 0+(diameter*1/2) || x > width-(diameter*1/2) ) xSpeed *= -1;
-    if ( y < 0+(diameter*1/2) || y > height-(diameter*1/2) ) ySpeed *= -1;
+    if ( y < tableY+(diameter*1/2) || y > height-(diameter*1/2) ) ySpeed *= -1;
   } //End bounce
   void goalExplosion(float xParameter, float yParamter, float gravityParameter) {
     for (int i=0; i < fireworks.length; i++) {
@@ -94,4 +95,8 @@ class Ball
     }
   } //End goal
   //
+  //Getters and Setter
+  void tableYUpdate( float tableYParameter ) {
+    tableY = tableYParameter;
+  }
 } //End Ball

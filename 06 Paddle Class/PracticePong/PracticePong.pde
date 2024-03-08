@@ -29,6 +29,10 @@ void draw() {
   myPaddle.draw();
   yourPaddle.draw();
   //
+  //Update the Paddle Position for the Ball, before drawing the Ball
+  myBall.tableYUpdate(myPaddle.tableY);
+  movedBall.tableYUpdate(myPaddle.tableY);
+  //
   if ( myBall.disappear == true ) {
     //EMPTY IF
     //myBall.step(); //Keeps active the variables but not .draw
@@ -55,12 +59,14 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
-  if ( key=='W' | key=='w' ) myPaddle;
-  if ( key=='S' | key=='s' ) myPaddle;
-  if ( key==CODED & keyCode==UP ) yourPaddle;
-  if ( key==CODED & keyCode==DOWN ) yourPaddle;
+  myPaddle.keyPressedWASD();
+  yourPaddle.keyPressedARROW();
 } //End keyPressed
 //
+void keyReleased() {
+  myPaddle.keyReleasedWASD();
+  yourPaddle.keyReleasedARROW();
+}
 void mousePressed() {
   //
 

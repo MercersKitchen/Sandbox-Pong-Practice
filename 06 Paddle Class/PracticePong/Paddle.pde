@@ -6,8 +6,9 @@ class Paddle {
   //Global Variables
   float tableX, tableY, tableWidth, tableHeight;
   float netX, netY, netWidth, netHeight;
-  float paddleX, paddleY, paddleWidth, paddleHeight;
+  float paddleX, paddleY, paddleWidth, paddleHeight, paddleStartHeight, paddleTravelDistance;
   color paddleColour;
+  Boolean up=false, down=false;
   //
   //Overloaded Constructor
   //Purpose: left and right paddles
@@ -23,15 +24,21 @@ class Paddle {
     }
     this.paddleX = netX + netWidth; //CAUTION: netX has two values, ERROR
     if ( paddleStartParameter == width ) netX = paddleStartParameter - netWidth;
-    paddleHeight = tableHeight * 1/4;
+    this.paddleStartHeight = 0.25; //if Easter Egg number must be tracked
+    this.paddleHeight = tableHeight * paddleStartHeight;
     this.paddleY = tableY + ( tableHeight * 1/2 ) - ( paddleHeight *1/2 );
     paddleColour = 0; //Grey Scale, not RGB, color ( int(random()), int(random()), int(random()) )
+    this.paddleTravelDistance = 1; //Easter Egg: paddle speed is 1 pixel
   } //End Paddle Constructor
   //
   void draw() {
     fill(paddleColour);
     paddles();
     fill(0); //Reset Defaults
+    //
+    //Arithmetic for Paddles
+    if ( up == true ) movePaddleUp();
+    if ( down == true ) movePaddleDown();
   } //End draw
   //
   //VOIDS and Returns
@@ -41,9 +48,29 @@ class Paddle {
   } //End Paddles
   void movePaddleDown() {
     paddleY += paddleTravelDistance;
+    if ( paddleY > tableY+tableHeight-paddleHeight ) paddleY = tableY+tableHeight-paddleHeight; //ERROR Catch
+    //down = false; //ERROR: boolean reset means one paddle at a time, no gamie
   } //End Move Paddles
   void movePaddleUp() {
     paddleY -= paddleTravelDistance;
+    if ( paddleY < tableY ) paddleY = tableY; //ERROR Catch
+    //up = false; //ERROR: boolean reset means one paddle at a time, no gamie
   } //End Move Paddles
   //
+  void keyPressedWASD() {
+    if ( key=='W' | key=='w' ) up=true ;
+    if ( key=='S' | key=='s' ) down=true;
+  }
+  void keyPressedARROW() {
+    if ( key==CODED & keyCode==UP ) up=true;
+    if ( key==CODED & keyCode==DOWN ) down=true;
+  }
+  void keyReleasedWASD() {
+    if ( key=='W' | key=='w' ) up=false ;
+    if ( key=='S' | key=='s' ) down=false;
+  }
+  void keyReleasedARROW() {
+    if ( key==CODED & keyCode==UP ) up=false;
+    if ( key==CODED & keyCode==DOWN ) down=false;
+  }
 } //End Paddle
