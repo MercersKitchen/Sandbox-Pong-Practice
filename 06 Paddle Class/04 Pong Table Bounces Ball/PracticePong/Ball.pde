@@ -98,13 +98,13 @@ class Ball
   } //End goal
   //
   //Getters and Setter
-  void tableYUpdate( float tableYParameter, float tableHeightParameter, float tableWidthParameter, float tableXParameter, float myPaddleXParameter, float yourPaddleXParameter, float myPaddleYParameter, float yourPaddleYParameter, float paddleWidthParameter, float paddleHeightParameter ) {
+  void tableYUpdate( float tableYParameter, float tableHeightParameter, float tableWidthParameter, float tableXParameter, float myPaddleXParameter, float yourPaddleXParameter, float myPaddleYParameter, float yourPaddleYParameter, float paddleWidthParameter, float myPaddleHeightParameter, float yourPaddleHeightParameter ) {
     tableY = tableYParameter;
     tableHeight = tableHeightParameter;
     tableWidth = tableXParameter + tableWidthParameter;
     paddleX = ( ballX < tableWidth*1/2 ) ? myPaddleXParameter : yourPaddleXParameter;
     paddleY = ( ballX < tableWidth*1/2 ) ? myPaddleYParameter : yourPaddleYParameter;
     paddleWidth = paddleWidthParameter;
-    paddleHeight = paddleHeightParameter;
+    paddleHeight = ( ballX < tableWidth*1/2 ) ? myPaddleHeightParameter : yourPaddleHeightParameter;
   }
 } //End Ball
