@@ -33,8 +33,8 @@ void draw() {
   //This update does not need to run in draw(), only at end of setup()
   //Note: pick a paddle that will always be instantiated here
   //Note: easier to iterate through an array here than somewhere else
-  // float tableYParameter, float tableHeightParameter, float tableWidthParameter, float tableXParameter, float paddleXParameter, float paddleYParameter, float paddleWidthParameter, float paddleHeightParameter
-  myBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight);
+  // float tableYParameter, float tableHeightParameter, float tableWidthParameter, float tableXParameter, float myPaddleXParameter, float paddleYParameter, float paddleWidthParameter, float paddleHeightParameter
+  myBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight, myPaddle.tableWidth, myPaddle.tableX, myPaddle.paddleX, yourPaddle.paddleX);
   movedBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight);
   //
   if ( myBall.disappear == true ) {
