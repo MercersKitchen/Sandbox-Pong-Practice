@@ -33,9 +33,9 @@ void draw() {
   //This update does not need to run in draw(), only at end of setup()
   //Note: pick a paddle that will always be instantiated here
   //Note: easier to iterate through an array here than somewhere else
-  // float tableYParameter, float tableHeightParameter, float tableWidthParameter, float tableXParameter, float myPaddleXParameter, float paddleYParameter, float paddleWidthParameter, float paddleHeightParameter
-  myBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight, myPaddle.tableWidth, myPaddle.tableX, myPaddle.paddleX, yourPaddle.paddleX, myPaddle.paddleY, yourPaddle.paddleY, myPaddle.paddleWidthParameter, myPaddle.paddleHeightParameter, yourPaddle.paddleHeightParameter);
-  movedBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight, myPaddle.tableWidth, myPaddle.tableX, myPaddle.paddleX, yourPaddle.paddleX, myPaddle.paddleY, yourPaddle.paddleY, myPaddle.paddleWidthParameter, myPaddle.paddleHeightParameter, yourPaddle.paddleHeightParameter);
+  // float paddleWidthParameter, float myPaddleHeightParameter, float yourPaddleHeightParameter
+  myBall.tableYUpdate(myPaddle.tableX, myPaddle.tableY, myPaddle.tableWidth, myPaddle.tableHeight, myPaddle.paddleX, yourPaddle.paddleX, myPaddle.paddleY, yourPaddle.paddleY, myPaddle.paddleWidth, myPaddle.paddleHeight, yourPaddle.paddleHeight);
+  //movedBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight, myPaddle.tableWidth, myPaddle.tableX, myPaddle.paddleX, yourPaddle.paddleX, myPaddle.paddleY, yourPaddle.paddleY, myPaddle.paddleWidth, myPaddle.paddleHeight, yourPaddle.paddleHeight);
   //
   if ( myBall.disappear == true ) {
     //EMPTY IF
