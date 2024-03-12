@@ -34,7 +34,7 @@ void draw() {
   //Note: pick a paddle that will always be instantiated here
   //Note: easier to iterate through an array here than somewhere else
   // float tableYParameter, float tableHeightParameter, float tableWidthParameter, float tableXParameter, float myPaddleXParameter, float paddleYParameter, float paddleWidthParameter, float paddleHeightParameter
-  myBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight, myPaddle.tableWidth, myPaddle.tableX, myPaddle.paddleX, yourPaddle.paddleX);
+  myBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight, myPaddle.tableWidth, myPaddle.tableX, myPaddle.paddleX, yourPaddle.paddleX, myPaddle.paddleY, yourPaddle.paddleY, );
   movedBall.tableYUpdate(myPaddle.tableY, myPaddle.tableHeight);
   //
   if ( myBall.disappear == true ) {
