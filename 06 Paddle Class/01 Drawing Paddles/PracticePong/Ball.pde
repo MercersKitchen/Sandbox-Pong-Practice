@@ -30,6 +30,7 @@ class Ball
     //ERROR: random() will choose ZERO, not only -1 & 1
     this.xSpeedChange = 1.0; //Break bounce physics
     this.ySpeedChange = 1.0; //Change speeds
+    this.disappear=false;
   } //End Ball Constructor
   //
   // Mulitple Constructors by identifying different parameters
