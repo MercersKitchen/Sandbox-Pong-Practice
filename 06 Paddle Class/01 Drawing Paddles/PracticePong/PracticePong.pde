@@ -55,10 +55,12 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
+  /*
   if ( key=='W' | key=='w' ) myPaddle.up=true ;
   if ( key=='S' | key=='s' ) myPaddle.down=true;
   if ( key==CODED & keyCode==UP ) yourPaddle.up=true;
   if ( key==CODED & keyCode==DOWN ) yourPaddle.down=true;
+  */
 } //End keyPressed
 //
 void mousePressed() {

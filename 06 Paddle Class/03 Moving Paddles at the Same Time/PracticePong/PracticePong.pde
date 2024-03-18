@@ -16,7 +16,7 @@ void setup() {
   for (int i=0; i < fireworks.length; i++) {
     fireworks[i] = new Ball(width*-1, height*-1, 0.5);
   }
-  movedBall = new Ball(width*-1, height*-1, myBall.diameter, myBall.colour, myBall.xSpeed, myBall.ySpeed, myBall.xSpeedChange, myBall.ySpeedChange);
+  //movedBall = new Ball(width*-1, height*-1, myBall.diameter, myBall.colour, myBall.xSpeed, myBall.ySpeed, myBall.xSpeedChange, myBall.ySpeedChange);
   myPaddle = new Paddle( 0, myBall.diameter );
   yourPaddle = new Paddle( width, myBall.diameter );
   //

@@ -37,8 +37,10 @@ class Paddle {
     fill(0); //Reset Defaults
     //
     //Arithmetic for Paddles
+    /*
     if ( up == true ) movePaddleUp();
     if ( down == true ) movePaddleDown();
+    */
   } //End draw
   //
   //VOIDS and Returns
@@ -46,6 +48,7 @@ class Paddle {
   void paddles() {
     rect(paddleX, paddleY, paddleWidth, paddleHeight);
   } //End Paddles
+  /*
   void movePaddleDown() {
     paddleY += paddleTravelDistance;
     if ( paddleY > tableY+tableHeight-paddleHeight ) paddleY = tableY+tableHeight-paddleHeight; //ERROR Catch
@@ -56,5 +59,6 @@ class Paddle {
     if ( paddleY < tableY ) paddleY = tableY; //ERROR Catch
     up = false;
   } //End Move Paddles
+  */
   //
 } //End Paddle
