@@ -17,6 +17,8 @@ class Paddle {
     paddleWidth = ballDiameterParameter * 1/2; //Ball Radius
     tableY = height * 1/10;
     tableHeight = height * 8/10;
+    tableX = width*0;
+    tableWidth = width;
     //CAUTION: netX will have the same value
     if ( paddleStartParameter == 0 ) netX = paddleStartParameter; //Adding to the netX
     if ( paddleStartParameter == width ) {

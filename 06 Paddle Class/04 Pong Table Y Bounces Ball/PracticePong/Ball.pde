@@ -31,6 +31,7 @@ class Ball
     //ERROR: random() will choose ZERO, not only -1 & 1
     this.xSpeedChange = 1.0; //Break bounce physics
     this.ySpeedChange = 1.0; //Change speeds
+    this.disappear=false;
   } //End Ball Constructor
   //
   // Mulitple Constructors by identifying different parameters
@@ -56,6 +57,7 @@ class Ball
     this.ySpeed = ySpeedParameter;
     this.xSpeedChange = xSpeedChangeParameter;
     this.ySpeedChange = ySpeedChangeParameter;
+    //no DRAW OFF Boolean
   } //End Moved Ball Constructor
   //
   float xDirection() {
@@ -86,9 +88,8 @@ class Ball
     y += ySpeed * ySpeedChange;
   } //End step
   void bounce() {
-    if ( x < tableX+(diameter*1/2) ) xSpeed *= -1;
-    if ( x > tableX+tableWidth-(diameter*1/2) ) xSpeed *= -1;
-    //
+    //println(tableX, tableY, tableWidth, tableHeight);
+    if ( x < tableX+(diameter*1/2) || x > tableX+tableWidth-(diameter*1/2) ) xSpeed *= -1;
     if ( y < tableY+(diameter*1/2) || y > tableY+tableHeight-(diameter*1/2) ) ySpeed *= -1;
   } //End bounce
   void goalExplosion(float xParameter, float yParamter, float gravityParameter) {

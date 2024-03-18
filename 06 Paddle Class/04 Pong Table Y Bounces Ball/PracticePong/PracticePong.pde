@@ -77,7 +77,7 @@ void mousePressed() {
   movedBall = new Ball(mouseX, mouseY, myBall.diameter, myBall.colour, myBall.xSpeed, myBall.ySpeed, myBall.xSpeedChange, myBall.ySpeedChange);
   //CAUTION: only brings forth myBall, not last known movedBall
   //Note: .draw is not being executed so
-  //myBall.disappear = true;
+  myBall.disappear = true;
 } //End mousePressed
 //
 //End DRIVER
