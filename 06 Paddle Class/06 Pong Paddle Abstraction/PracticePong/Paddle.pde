@@ -11,18 +11,9 @@ class Paddle {
   Boolean up=false, down=false;
   //
   //Overloaded Constructor
-  //Pong Table Constructor
-  //CAUTION: executes once, can be a problem
-  Paddle () {
-    //Table Vars required for pong-paddle objects, see two-param constructor
-    tableX = width*0;
-    tableY = height * 1/10;
-    tableWidth = width;
-    tableHeight = height * 8/10;
-  } //End Paddle - Pong Table Constructor
-  //
   //Purpose: left and right paddles
   Paddle ( float paddleStartParameter, float ballDiameterParameter ) {
+    tablePopulation(); //Technically, vars populated twice
     netWidth = ballDiameterParameter * 3;
     paddleWidth = ballDiameterParameter * 1/2; //Ball Radius
     //CAUTION: netX will have the same value
@@ -40,7 +31,9 @@ class Paddle {
   } //End Paddle Constructor
   //
   void draw() {
+    fill(255);
     table(); //System Resources ERROR: draw() loop is too much for one drawing
+    fill(0); //Reset Defaults
     //CAUTION: PONG TABLE drawn 120x/second, code in both paddle instances
     fill(paddleColour);
     paddles();
@@ -53,6 +46,12 @@ class Paddle {
   //
   //VOIDS and Returns
   //Draw Table
+  void tablePopulation() {
+    tableX = width*0;
+    tableY = height * 1/10;
+    tableWidth = width;
+    tableHeight = height * 8/10;
+  } //End Table
   void table() {
     rect(tableX, tableY, tableWidth, tableHeight); //need lines for design
     //line(); //alternative design
