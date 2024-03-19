@@ -11,6 +11,16 @@ class Paddle {
   Boolean up=false, down=false;
   //
   //Overloaded Constructor
+  //Pong Table Constructor
+  //CAUTION: executes once, can be a problem
+  Paddle () {
+    //Table Vars required for pong-paddle objects, see two-param constructor
+    tableX = width*0;
+    tableY = height * 1/10;
+    tableWidth = width;
+    tableHeight = height * 8/10;
+  } //End Paddle - Pong Table Constructor
+  //
   //Purpose: left and right paddles
   Paddle ( float paddleStartParameter, float ballDiameterParameter ) {
     netWidth = ballDiameterParameter * 3;
@@ -28,16 +38,6 @@ class Paddle {
     paddleColour = 0; //Grey Scale, not RGB, color ( int(random()), int(random()), int(random()) )
     this.paddleTravelDistance = 1; //Easter Egg: paddle speed is 1 pixel
   } //End Paddle Constructor
-  //
-  //Pong Table Constructor
-  //CAUTION: executes once, can be a problem
-  Paddle () {
-    //Table Vars required for pong-paddle objects, see two-param constructor
-    tableX = width*0;
-    tableY = height * 1/10;
-    tableWidth = width;
-    tableHeight = height * 8/10;
-  } //End Paddle - Pong Table Constructor
   //
   void draw() {
     table(); //System Resources ERROR: draw() loop is too much for one drawing
