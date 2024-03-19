@@ -61,6 +61,7 @@ void draw() {
   for (int i=0; i < fireworks.length; i++) {
     fireworks[i].draw(); //
   }
+  println(myPaddle.paddleX, myPaddle.paddleY, myPaddle.paddleWidth, myPaddle.paddleHeight);
 } //End draw
 //
 void keyPressed() {

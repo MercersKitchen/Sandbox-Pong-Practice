@@ -31,9 +31,11 @@ class Paddle {
   } //End Paddle Constructor
   //
   void draw() {
-    fill(255);
-    table(); //System Resources ERROR: draw() loop is too much for one drawing
-    fill(0); //Reset Defaults
+    if (paddleX < width*1/2) {
+      fill(255);
+      table(); //System Resources ERROR: draw() loop is too much for one drawing
+      fill(0); //Reset Defaults
+    }
     //CAUTION: PONG TABLE drawn 120x/second, code in both paddle instances
     fill(paddleColour);
     paddles();
@@ -49,7 +51,7 @@ class Paddle {
   void tablePopulation() {
     tableX = width*0;
     tableY = height * 1/10;
-    tableWidth = width;
+    tableWidth = width-1;
     tableHeight = height * 8/10;
   } //End Table
   void table() {
