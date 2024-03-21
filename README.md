@@ -44,14 +44,16 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 
 ### Additions to Programs
-
+- [ ] Minim for Sound Effects and Background Music (see grade 10 program in your GitHub or see my Introductory REsponsitory)
+  - https://github.com/Intro-CS-App-Dev-and-Deploy/App-Development
+- [ ] TBA
 
 ### Reminders for Introductory Objects
-- Getters and Setters
-- toString() methods
-- Public and Private Methods, other methods
-- When variables are needed by other CLASSES' Code for operation
-
+- [ ] Getters and Setters
+- [ ] toString() methods
+- [ ] Public and Private Methods, other methods
+- [ ] When variables are needed by other CLASSES' Code for operation
+- [ ] TBA
 
 ---
 
