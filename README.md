@@ -31,14 +31,14 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
   - [x] Night Sky Metaphor, Pong Ball may bounce off tiny stars
   - [x] Chase Metaphor for Stars in the Knight-time Sky
   - [x] Blackhole, Collapses all stars
-- [ ] Creatign a New Class: Pong Rackets, left and right, Pong Table, Pong Scoreboard associated with left and right paddles
+- [ ] Creating a New Class: Pong Rackets, left and right, Pong Table, Pong Scoreboard associated with left and right paddles
   - [ ] Pong Table
   - [ ] Net's in the Table
   - [ ] Pong Paddle on the edge of the table, defending the goal and attaching
-  - [ ] Shape, bouncable dimensions, separation from goal trigger
+  - [ ] Shape, bounceable dimensions, separation from goal trigger
   - [ ] Paddle will not move off the table
-  - [ ] Pong Rackets are just a rectable or player ... the racket knows the score
-- [ ] Communciation between instances
+  - [ ] Pong Rackets are just a rectangle or player ... the racket knows the score
+- [ ] Communication between instances
 
 - [ ] OPTIONAL, Advanced: ball collisions & the physics of conservation of momentum in two dimensions (is a phsysics lesson using right triangles)
 
@@ -54,6 +54,17 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 - [ ] Public and Private Methods, other methods
 - [ ] When variables are needed by other CLASSES' Code for operation
 - [ ] TBA
+
+## Hackathons to manage learning, demonstration, and group work
+
+### First: 
+- [ ] See Google Classroom
+
+### Second: 
+- [ ] See Google Classroom
+
+### Third: 
+- [ ] See Google Classroom
 
 ---
 
