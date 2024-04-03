@@ -8,7 +8,7 @@ void setup() {
 //
 void draw() {
   //ERROR Check of Display: Landscape ONLY
-  displayLandscape(); //Bru, turn your phun
+  if ( displaycheck==true ) displayLandscape(); //Bru, turn your phun
   //
 } //End draw
 //
