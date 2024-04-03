@@ -1,11 +1,16 @@
 //Global Variables
 //
-void setup() {} //End setup
+void setup() {
+  display();
+} //End setup
 //
-void draw() {} //End draw
+void draw() {
+} //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+} //End keyPressed
 //
 //End Driver
