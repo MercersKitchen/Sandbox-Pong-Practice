@@ -1,8 +1,8 @@
 //Global Variables
 //
 void setup() {
-  //size(600, 400); //Landscape
-  fullScreen();
+  size(400, 600); //Landscape
+  //fullScreen();
   display();
 } //End setup
 //
