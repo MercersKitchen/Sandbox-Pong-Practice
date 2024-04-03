@@ -1,10 +1,15 @@
 //Global Variables
 //
 void setup() {
+  //size(600, 400); //Landscape
+  fullScreen();
   display();
 } //End setup
 //
 void draw() {
+  //ERROR Check of Display: Landscape ONLY
+  displayLandscape(); //Bru, turn your phun
+  //
 } //End draw
 //
 void mousePressed() {
