@@ -17,23 +17,28 @@ Reminder: abstract classes follow rules
 
 Abstract Class DOC Map
 - [ ] MAIN Program: same name as Folder
-- [ ] SHAPE: x, y, width, height, colour
+- [ ] SHAPE: x, y, width, height, colour, draw()
   - Circle
   - Rectangle
-- [ ] CIRCLE: 
+- [ ] CIRCLE: move()
   - Ball
   - Moved Ball
   - Fireworks
-- [ ] RECTANGLE: 
+- [ ] RECTANGLE: colour()
   - Paddle: movement
   - Button: hover over, menu, action
-  - Pong Table
+  - Pong Table: 
   - Score Board: incrementing and display of number of ball objects that stop in the net
 - [ ] BUTTON: 
   - Reset: variables set to "game start"
   - Start: move the ball
   - Quit: exit()
 - [ ] TBA
+
+---
+
+Commenting Functions from 2-Class Pong into Abstract Class Pong
+- Put multi-line comments are bottom of each class
 
 ---
 
