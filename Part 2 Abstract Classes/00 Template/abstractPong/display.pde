@@ -20,10 +20,10 @@ void display() {
 //
 void displayLandscape() { //Display ERROR Check in draw()
   println("CAR!!!"); //Developer ONLY Notification
-  
   //Add text, image, sounds, etc. to the CANVAS telling Gamer, not developer
   //Add MINIM Library for Sounds or Song
   //Text is Manditory for Scoreboard & Personalization (consider it here)
+  textDraw(appHeight, purpleInk, CENTER, CENTER, generalFont, geometryErrorText, geometryErrorX, geometryErrorY, geometryErrorWidth, geometryErrorHeight);
   //
 } //End Display Landscape ERROR Check
 //
@@ -48,7 +48,8 @@ void textSetup()
   geometryErrorWidth = int( textWidth(geometryErrorText) );
   geometryErrorHeight = height*1/10;
   //
-  rect( geometryErrorX, geometryErrorY, geometryErrorWidth, geometryErrorHeight );
+  //Layout Text, inspect rect() variables
+  //rect( geometryErrorX, geometryErrorY, geometryErrorWidth, geometryErrorHeight );
   //
 }//End textSetup()
 //
@@ -83,6 +84,6 @@ float textCalculator(float size, String string, float rectWidth)
     size = size * 0.99; //size-- will do pixels
     textSize(size);
   }//End WHILE;
-  size =  size * 0.55; //different fonts and string sizes need extra shrinking
+  //size =  size * 0.5; //different fonts and string sizes need extra shrinking
   return size; //Purpose of Calculator
 }//End textCalculator
