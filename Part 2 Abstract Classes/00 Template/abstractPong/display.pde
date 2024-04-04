@@ -1,5 +1,5 @@
 int appWidth, appHeight;
-Boolean displaycheck = false;
+Boolean displayCheck = false;
 //
 PFont generalFont;
 int geometryErrorX, geometryErrorY, geometryErrorWidth, geometryErrorHeight; //Layout rect()
@@ -7,29 +7,39 @@ String geometryErrorText = "Bru, turn your phun!";
 color purpleInk = #2C08FF; //Not nice for Night Mode, Blue Content
 color whiteInk = #FFFFFF;
 //
+void displayCheck() {
+  displayCheck = ( appWidth >= appHeight ) ? false : true ;
+  if ( displayCheck==true ) {
+    playDisplayError=true;
+  } else {
+    playDisplayError=false;
+  }
+}
+//
 void display() {
   //Display Orientation: Landscape, not portrait nor square (sort of)
-  println(width, height, displayWidth, displayHeight);
+  //println(width, height, displayWidth, displayHeight);
   appWidth = width; //Best Practice: do not manipulate key variables
   appHeight = height;
-  println(displaycheck);
-  displaycheck = ( appWidth >= appHeight ) ? false : true ;
-  println(displaycheck);
-  textSetup();
+  displayCheck();
+  textSetup(); //See Below
+  if ( displayCheck==true ) song1.loop(0);
 } //End Display Method
 //
 void displayLandscape() { //Display ERROR Check in draw()
-  println("CAR!!!"); //Developer ONLY Notification
+  //println("CAR!!!"); //Developer ONLY Notification
   //Add text, image, sounds, etc. to the CANVAS telling Gamer, not developer
   //Add MINIM Library for Sounds or Song
   //Text is Manditory for Scoreboard & Personalization (consider it here)
   textDraw(appHeight, purpleInk, CENTER, CENTER, generalFont, geometryErrorText, geometryErrorX, geometryErrorY, geometryErrorWidth, geometryErrorHeight);
   //
+  //Sound ERROR: how do you play a song once and ckeck it in void draw()
+  //
 } //End Display Landscape ERROR Check
 //
 void textSetup()
 {
-  println("Start of Console");
+  //println("Start of Console");
   //
   /*Fonts from OS
    String[] fontList = PFont.list(); //To list all fonts available on system
@@ -44,7 +54,7 @@ void textSetup()
   int textCenterX = int( textWidth(geometryErrorText)*1/2 );
   //int textCenterY
   geometryErrorX = referentMeasureX-textCenterX;
-  geometryErrorY = referentMeasureY; //ERROR, not centred 
+  geometryErrorY = referentMeasureY; //ERROR, not centred
   geometryErrorWidth = int( textWidth(geometryErrorText) );
   geometryErrorHeight = height*1/10;
   //
