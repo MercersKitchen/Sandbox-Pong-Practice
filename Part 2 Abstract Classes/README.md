@@ -15,7 +15,9 @@ Reminder: abstract classes follow rules
 
 ---
 
-Abstract Class DOC Map
+# Preparation
+
+Abstract Class DOC Map: documenting how variables and method names cascade (values and functions can be manipulated)
 - [ ] MAIN Program: same name as Folder
 - [ ] SHAPE: x, y, width, height, colour, draw()
   - Circle
@@ -27,15 +29,20 @@ Abstract Class DOC Map
 - [ ] RECTANGLE: colour()
   - Paddle: movement
   - Button: hover over, menu, action
-  - Pong Table: 
-  - Score Board: incrementing and display of number of ball objects that stop in the net
+  - PongTable: 
+  - ScoreBoard: incrementing and display of number of ball objects that stop in the net
 - [ ] BUTTON: 
   - Reset: variables set to "game start"
   - Start: move the ball
   - Quit: exit()
-- [ ] TBA
+
+Questions:
+- [ ] How would text be cascaded into RECTANGLE and BUTTON but not Paddle and PoneTable
 
 ---
+
+# Progressions
+- Must have working pong game first
 
 Commenting Functions from 2-Class Pong into Abstract Class Pong
 - Put multi-line comments are bottom of each class
@@ -43,6 +50,7 @@ Commenting Functions from 2-Class Pong into Abstract Class Pong
 ---
 
 # To Include: 
-- TBA
+- Review Abstract Lesson Code
+- Add to Sandbox
 
 ---
