@@ -8,8 +8,8 @@ import ddf.minim.ugens.*;
 //Global Variables
 //
 void setup() {
-  //size(400, 600); //Landscape for testing
-  fullScreen();
+  size(400, 600); //Landscape for testing
+  //fullScreen();
   musicSetup();
   display();
 } //End setup
