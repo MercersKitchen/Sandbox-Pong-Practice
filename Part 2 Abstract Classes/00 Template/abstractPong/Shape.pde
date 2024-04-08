@@ -21,7 +21,7 @@ abstract class Shape {
     //Empty
   } //End draw()
   //
-  int nightModeColour() {
+  color nightModeColour() {
     color nm = 0;
     return nm;
   } //End Night Mode Colour Selector
