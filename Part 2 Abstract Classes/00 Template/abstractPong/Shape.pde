@@ -4,18 +4,26 @@ abstract class Shape {
   float y; //Y-Variable, Position
   float w; //Width
   float h; //Height
-  color c; //Shape Colour
+  color c, rd; //Shape Colour
   //
   //Constructor
-  Shape(float xParameter, float yParameter, float wParameter, float hParameter, color cParameter) {
-    this.x = xParameter;
-    this.y = yParameter;
-    this.w = wParameter;
-    this.h = hParameter;
-    this.c = cParameter;
+  Shape(float x, float y, float w, float h, color c) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.c = c;
+    rd = nightModeColour();
   } //End Constructor
   //
   //Methods
-  void draw() {} //End draw()
+  void draw() {
+    //Empty
+  } //End draw()
+  //
+  int nightModeColour() {
+    color nm = 0;
+    return nm;
+  } //End Night Mode Colour Selector
   //
 } //End Shape
