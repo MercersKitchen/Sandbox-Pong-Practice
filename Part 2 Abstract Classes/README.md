@@ -19,13 +19,12 @@ Reminder: abstract classes follow rules
 
 Abstract Class DOC Map: documenting how variables and method names cascade (values and functions can be manipulated)
 - [ ] MAIN Program: same name as Folder
-- [ ] SHAPE: x, y, width, height, colour, draw()
+- [ ] SHAPE: x, y, width, height, colour, draw(), backgroundColour()
   - Circle
   - Rectangle
-- [ ] CIRCLE: move()
-  - Ball
-  - Moved Ball
-  - Fireworks
+- [ ] CIRCLE
+  - Ball: notice this is only a single object, move()
+  - Fireworks: notice this array executes from inside the class, differentMove()
 - [ ] RECTANGLE: colour()
   - Paddle: movement
   - Button: hover over, menu, action

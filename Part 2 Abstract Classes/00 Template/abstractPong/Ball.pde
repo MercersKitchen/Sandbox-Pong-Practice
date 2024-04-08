@@ -10,7 +10,7 @@ class Ball extends Circle {
   void draw() {
   } //End Draw
   //
-  color nightModeColour() {
+  color backgroundColour() {
     color nm = 0;
     return nm;
   } //End Night Mode Colour Selector

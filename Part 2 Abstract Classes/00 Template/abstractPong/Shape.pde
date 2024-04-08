@@ -13,7 +13,7 @@ abstract class Shape {
     this.w = w;
     this.h = h;
     this.c = c;
-    rd = nightModeColour();
+    rd = backgroundColour();
   } //End Constructor
   //
   //Methods
@@ -21,7 +21,7 @@ abstract class Shape {
     //Empty
   } //End draw()
   //
-  color nightModeColour() {
+  color backgroundColour() {
     color nm = 0;
     return nm;
   } //End Night Mode Colour Selector
