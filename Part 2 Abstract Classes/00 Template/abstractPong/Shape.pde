@@ -17,13 +17,8 @@ abstract class Shape {
   } //End Constructor
   //
   //Methods
-  void draw() {
-    //Empty
-  } //End draw()
+  abstract void draw(); //Empty draw()
   //
-  color backgroundColour() {
-    color nm = 0;
-    return nm;
-  } //End Night Mode Colour Selector
+  abstract color backgroundColour(); //End Night Mode Colour Selector
   //
 } //End Shape

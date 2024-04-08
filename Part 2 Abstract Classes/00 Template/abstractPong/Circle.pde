@@ -12,10 +12,6 @@ abstract class Circle extends Shape {
     fill(rd);
   } //End draw
   //
-  color backgroundColour() {
-    color nm = 0;
-    return nm;
-  } //End Night Mode Colour Selector
-  //
+  abstract color backgroundColour(); //End Night Mode Colour Selector
   //
 } // End Circle
