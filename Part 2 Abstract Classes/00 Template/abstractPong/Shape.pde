@@ -8,13 +8,14 @@ abstract class Shape {
   //
   //Constructor
   Shape(float xParameter, float yParameter, float wParameter, float hParameter, color cParameter) {
-    this.x;
-    this.y;
-    this.w;
-    this.h;
-    this.c;
+    this.x = xParameter;
+    this.y = yParameter;
+    this.w = wParameter;
+    this.h = hParameter;
+    this.c = cParameter;
   } //End Constructor
   //
   //Methods
+  void draw() {} //End draw()
   //
 } //End Shape
