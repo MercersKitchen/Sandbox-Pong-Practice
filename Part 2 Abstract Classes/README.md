@@ -26,9 +26,9 @@ Abstract Class DOC Map: documenting how variables and method names cascade (valu
   - Ball: notice this is only a single object, move()
   - Fireworks: notice this array executes from inside the class, differentMove()
 - [ ] RECTANGLE: colour()
+  - PongTable: 
   - Paddle: movement
   - Button: hover over, menu, action
-  - PongTable: 
   - ScoreBoard: incrementing and display of number of ball objects that stop in the net
 - [ ] BUTTON: 
   - Reset: variables set to "game start"
