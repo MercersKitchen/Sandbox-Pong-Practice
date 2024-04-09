@@ -24,16 +24,20 @@ Abstract Class DOC Map: documenting how variables and method names cascade (valu
   - Rectangle
 - [ ] CIRCLE
   - Ball: notice this is only a single object, move()
+	- Note: Ball Class gives information to Fireworks Class
   - Fireworks: notice this array executes from inside the class, differentMove()
 - [ ] RECTANGLE: colour()
+  - NOte: These classes give information to Ball CLasses
   - PongTable: 
   - Paddle: movement
   - Button: hover over, menu, action
   - ScoreBoard: incrementing and display of number of ball objects that stop in the net
-- [ ] BUTTON: 
-  - Reset: variables set to "game start"
-  - Start: move the ball
+- [ ] BUTTON:
+  - Start | Restart: move the ball, resets starting variables
   - Quit: exit()
+  - Player: 2-player, 1-player, screen saver (keyboard is overwritten with y-variable)
+  - Menu | Personalization | Instructions | Settings : TBA
+  - Stop Game and save the state to restart when program restarts
 
 Questions:
 - [ ] How would text be cascaded into RECTANGLE and BUTTON but not Paddle and PoneTable
