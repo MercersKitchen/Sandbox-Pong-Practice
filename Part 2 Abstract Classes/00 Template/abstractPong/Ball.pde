@@ -20,4 +20,8 @@ class Ball extends Circle {
     //Bounce off top and bottom, paddles will be later
   } //End Move Ball
   //
+  /* Features
+   - Ball in net triggers FIREWORKS
+   */
+  //
 } //End Ball
