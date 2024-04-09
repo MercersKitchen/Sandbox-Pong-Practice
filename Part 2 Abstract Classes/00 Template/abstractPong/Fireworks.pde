@@ -1,7 +1,9 @@
 class Fireworks extends Circle {
   //Global Variables
   //
-  Fireworks () {
+  Fireworks (float x, float y, float w, float h, color c) {
+    super(x, y, w, h, c);
+    //Add gravity to how the Fireworks.move()
   } //Fireworks
   //
   //Methods
