@@ -50,6 +50,10 @@ Questions:
 Commenting Functions from 2-Class Pong into Abstract Class Pong
 - Put multi-line comments are bottom of each class
 
+Tasks
+- [x] Create the template
+- [ ] Make the Ball Bounce in the Table
+
 ---
 
 # To Include: 
