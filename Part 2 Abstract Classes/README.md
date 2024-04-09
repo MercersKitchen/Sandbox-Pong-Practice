@@ -52,7 +52,16 @@ Commenting Functions from 2-Class Pong into Abstract Class Pong
 
 Tasks
 - [x] Create the template
-- [ ] Make the Ball Bounce in the Table
+- [ ] Build the Pong Table 
+- [ ] Build a Ball
+
+For rest of tasks: Class Communication in Driver (Objects) | Class Communication in Class (Array List)
+- NOTE: Compare and Contrast these driver methods
+- [ ] Bounce in the Table (especially top and bottom)
+- [ ] Make the Paddles, left and right
+- [ ] Bounce the Ball off the Paddles, gets stuck in the net
+- [ ] Ball-in-net triggers Scoreboard
+- [ ] Ball-in-net triggers Fireworks
 
 ---
 
