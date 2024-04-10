@@ -14,8 +14,7 @@ void setup() {
   musicSetup();
   display();
   // Night Mode
-  //ERROR: 0 is not nightmode
-  color colour = 0; //CAUTION: using timer or button to change Night Mode
+  color colour = #050500; //CAUTION: using timer or button to change Night Mode
   //
   pongTable = new PongTable (appWidth*0, appHeight*1/10, appWidth, appHeight*8/10, colour);
   //
