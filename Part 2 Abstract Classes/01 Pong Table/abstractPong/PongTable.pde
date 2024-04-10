@@ -1,4 +1,4 @@
-abstract class PongTable extends Rectangle {
+class PongTable extends Rectangle {
   //Global Variables
   //
   PongTable (float x, float y, float w, float h, color c) {
@@ -6,7 +6,17 @@ abstract class PongTable extends Rectangle {
   } //End PongTable
   //
   //Methods
-  abstract void draw();
+  void draw() {
+    //Border: foreground v background, separation from table to buttons
+    //Background Colour: simple fill or toggle with nightMode
+    rect(x, y, w, h); //Pong Table
+    //Reset the Defaults
+  } //End draw()
+  //
+  color backgroundColour() { //See Night Mode
+    color colour=0;
+    return colour;
+  } //End backgroundColour
   //
   /* Features:
    - Give Ball top and bottom lines to bounce off of
