@@ -11,7 +11,9 @@ class PongTable extends Rectangle {
   void draw() {
     //Border: foreground v background, separation from table to buttons
     //Background Colour: simple fill or toggle with nightMode
+    fill(c);
     rect(x, y, w, h); //Pong Table
+    //fill(resetDefault);
     //Net Lines based on net variables
     //Reset the Defaults
   } //End draw()
