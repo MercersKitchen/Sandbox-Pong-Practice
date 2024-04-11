@@ -1,17 +1,13 @@
 abstract class Circle extends Shape {
   //Global Variables
   //
-  Circle (float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  Circle (float x, float y, float w, float h, Boolean n, color c) {
+    super(x, y, w, h, n, c);
   } //End Circle
   //
   //Methods
-  void draw() {
-    fill(c);
-    ellipse(x, y, w, h);
-    fill(rd);
-  } //End draw
+  abstract void draw(); //End draw
   //
-  abstract color backgroundColour(); //End Night Mode Colour Selector
+  abstract color backgroundColour(Boolean n); //End Night Mode Colour Selector
   //
 } // End Circle

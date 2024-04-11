@@ -1,8 +1,8 @@
 class Ball extends Circle {
   //Global Variables
   //
-  Ball(float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  Ball(float x, float y, float w, float h, Boolean n, color c) {
+    super(x, y, w, h, n, c);
   } //End Ball
   //
   //Methods
@@ -10,7 +10,7 @@ class Ball extends Circle {
   void draw() {
   } //End Draw
   //
-  color backgroundColour() {
+  color backgroundColour(Boolean n) {
     color nm = 0;
     return nm;
   } //End Night Mode Colour Selector

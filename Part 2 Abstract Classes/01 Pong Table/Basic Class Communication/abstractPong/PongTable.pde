@@ -1,23 +1,31 @@
 class PongTable extends Rectangle {
   //Global Variables
   //
-  PongTable (float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  PongTable (float x, float y, float w, float h, Boolean n, color c) {
+    super(x, y, w, h, n, c);
   } //End PongTable
   //
   //Methods
   void draw() {
     //Border: foreground v background, separation from table to buttons
     //Background Colour: simple fill or toggle with nightMode
+    //println(c);
+    c = backgroundColour(n);
     fill(c);
     rect(x, y, w, h); //Pong Table
     //fill(resetDefault);
     //Reset the Defaults
   } //End draw()
   //
-  color backgroundColour() { //See Night Mode
+  color backgroundColour(Boolean n) { //See Night Mode
     color colour=0;
-    return colour;
+    if ( n == true ) {
+      colour = #050500;
+      return colour;
+    } else {
+      colour = #000000;
+      return colour;
+    }
   } //End backgroundColour
   //
   /* Features:

@@ -1,8 +1,8 @@
 abstract class Button extends Rectangle {
   //Global Variables
   //
-  Button (float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  Button (float x, float y, float w, float h, Boolean n, color c) {
+    super(x, y, w, h, n, c);
   } //End Button
   //
   //Methods

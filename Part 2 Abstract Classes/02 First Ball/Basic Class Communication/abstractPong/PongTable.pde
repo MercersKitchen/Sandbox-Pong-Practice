@@ -3,6 +3,7 @@ class PongTable extends Rectangle {
   //
   PongTable (float x, float y, float w, float h, color c) {
     super(x, y, w, h, c);
+    c = backgroundColour();
   } //End PongTable
   //
   //Methods
@@ -16,7 +17,7 @@ class PongTable extends Rectangle {
   } //End draw()
   //
   color backgroundColour() { //See Night Mode
-    color colour=0;
+    color colour=#050500;
     return colour;
   } //End backgroundColour
   //

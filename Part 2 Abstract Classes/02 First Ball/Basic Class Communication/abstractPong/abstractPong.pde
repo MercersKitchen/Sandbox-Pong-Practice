@@ -18,7 +18,7 @@ void setup() {
   color colourBackground = #050500; //CAUTION: using timer or button to change Night Mode
   color colourForeground = #ffff00;
   //
-  pongTable = new PongTable (appWidth*0, appHeight*1/10, appWidth, appHeight*8/10, colourBackground);
+  pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
   int ballDiameter = ( appWidth > appHeight ) ? appHeight : appWidth;
   ballDiameter = ballDiameter*1/60;
   ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
