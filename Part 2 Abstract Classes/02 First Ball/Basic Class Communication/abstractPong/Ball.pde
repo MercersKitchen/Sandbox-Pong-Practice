@@ -8,6 +8,9 @@ class Ball extends Circle {
   //Methods
   //
   void draw() {
+    fill(c);
+    ellipse(x, y, w, h);
+    fill(rd);
   } //End Draw
   //
   color backgroundColour() {
