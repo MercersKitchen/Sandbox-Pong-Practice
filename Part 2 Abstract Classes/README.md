@@ -57,8 +57,8 @@ Tasks
 
 For rest of tasks: Class Communication in Driver (Objects) | Class Communication in Class (Array List)
 - NOTE: Compare and Contrast these driver methods
-- [ ] Bounce in the Table (especially top and bottom)
-- [ ] Make the Paddles, left and right
+- [x] Bounce in the Table (especially top and bottom)
+- [x] Make the Paddles, left and right
 - [ ] Bounce the Ball off the Paddles, gets stuck in the net
 - [ ] Ball-in-net triggers Scoreboard
 - [ ] Ball-in-net triggers Fireworks
