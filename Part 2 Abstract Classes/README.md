@@ -52,8 +52,21 @@ Commenting Functions from 2-Class Pong into Abstract Class Pong
 
 Tasks
 - [x] Create the template
-- [ ] Build the Pong Table 
-- [ ] Build a Ball
+- [x] Build the Pong Table 
+- [x] Build a Ball
+- [x] Build the Paddles
+- [ ] Build the Fireworks Celebration
+- [ ] Build the Score Board
+- [ ] Colour Modes
+  - Daytime: light mode (black on white)
+  - Daytime: dark mode (white on black)
+  - Nighttime: yellow on black
+- [ ] Build the Buttons:
+  - [Basic] QUIT
+  - [Intermediate] Two-Player, One-Player, Screen Saver
+  - [Advanced] Menu, Personalization
+- [ ] Colour Modes
+- [ ] 
 
 For rest of tasks: Class Communication in Driver (Objects) | Class Communication in Class (Array List)
 - NOTE: Compare and Contrast these driver methods
@@ -62,6 +75,10 @@ For rest of tasks: Class Communication in Driver (Objects) | Class Communication
 - [ ] Bounce the Ball off the Paddles, gets stuck in the net
 - [ ] Ball-in-net triggers Scoreboard
 - [ ] Ball-in-net triggers Fireworks
+- [ ] TBA
+
+Advanced Ideas
+- [ ] Easter Eggs, etc.
 
 ---
 
