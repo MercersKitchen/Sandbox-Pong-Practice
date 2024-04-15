@@ -34,7 +34,7 @@ void draw() {
   pongTable.draw();
   ball.draw();
   //DRAW Paddles
-  //UPDATE ball.PaddleUpdate
+  //UPDATE ball.paddleUpdate();
   //
 } //End draw
 //
