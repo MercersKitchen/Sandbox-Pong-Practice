@@ -22,9 +22,9 @@ void setup() {
   int ballDiameter = ( appWidth > appHeight ) ? appHeight : appWidth;
   ballDiameter = ballDiameter*1/60;
   ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
-  println(ball.w);
-  //
-} //End setup
+  ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h ); //Execute ONCE
+  println(ball.pongTableTop);
+} //End Setup
 //
 void draw() {
   //ERROR Check of Display: Landscape ONLY
@@ -33,6 +33,9 @@ void draw() {
   //
   pongTable.draw();
   ball.draw();
+  //DRAW Paddles
+  //UPDATE ball.PaddleUpdate
+  //
 } //End draw
 //
 void mousePressed() {

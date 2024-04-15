@@ -1,5 +1,6 @@
 class Ball extends Circle {
   //Global Variables
+  float pongTableTop, pongTableBottom;
   //
   Ball(float x, float y, float w, float h, color c) {
     super(x, y, w, h, c);
@@ -20,11 +21,17 @@ class Ball extends Circle {
   //
   void move() {
     //Students to finish
-    //Bounce off top and bottom, paddles will be later
+    //Bounce off PongTable.y, paddles will be later
   } //End Move Ball
   //
   /* Features
    - Ball in net triggers FIREWORKS
    */
+  //
+  // Getters & Setters
+  void pongTableUpdate( float topParameter, float bottomParameter ) {
+    pongTableTop = topParameter;
+    pongTableBottom = bottomParameter;
+  } //End Pong Table Update
   //
 } //End Ball
