@@ -1,7 +1,8 @@
 class PongTable extends Rectangle {
   //Global Variables
   float leftNetX_Top, leftNetY_Top, leftNetX_Bottom, leftNetY_Bottom;
-  Float rightNetX_Top, rightNetY_Top, rightNetX_Bottom, rightNetY_Bottom;
+  float rightNetX_Top, rightNetY_Top, rightNetX_Bottom, rightNetY_Bottom;
+  float middlePongTableX, middlePongTableY_Top, middlePongTableY_Bottom;
   //
   PongTable (float x, float y, float w, float h, color c) {
     super(x, y, w, h, c);
@@ -21,6 +22,7 @@ class PongTable extends Rectangle {
     //strokeWeight();
     line(leftNetX_Top, leftNetY_Top, leftNetX_Bottom, leftNetY_Bottom);
     line(rightNetX_Top, rightNetY_Top, rightNetX_Bottom, rightNetY_Bottom);
+    line(middlePongTableX, middlePongTableY_Top, middlePongTableX, middlePongTableY_Bottom);
     noStroke();
     //Right Net
     //
@@ -47,6 +49,9 @@ class PongTable extends Rectangle {
     rightNetY_Top = leftNetY_Top;
     rightNetX_Bottom = rightNetX_Top;
     rightNetY_Bottom = leftNetY_Bottom;
+    middlePongTableX = ( ( rightNetX_Top - leftNetX_Top ) / 2 ) + netWidth; //Used in Paddle Constructor to create left or right Paddle
+    middlePongTableY_Top = leftNetY_Top;
+    middlePongTableY_Bottom = leftNetY_Bottom;
   } //Ball Diameter Update
   //
 } //End PongTable

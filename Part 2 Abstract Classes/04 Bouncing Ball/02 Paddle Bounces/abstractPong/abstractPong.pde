@@ -8,6 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 PongTable pongTable;
 Ball ball;
+Paddle leftPaddle, rightPaddle;
 //
 void setup() {
   //size(400, 600); //Landscape for testing
@@ -18,13 +19,16 @@ void setup() {
   color colourBackground = #050500; //CAUTION: using timer or button to change Night Mode
   color colourForeground = #ffff00;
   //
-  int ballDiameter = ( appWidth > appHeight ) ? appHeight : appWidth;
+  int ballDiameter = ( appWidth > appHeight ) ? appHeight : appWidth; //display() as landscape makes this redundant
   ballDiameter = ballDiameter*1/60;
   pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
   pongTable.ballDiameterUpdate( ballDiameter*2 );
   ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
-  ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h ); //Execute ONCE
-  println(ball.pongTableTop);
+  leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground); 
+  rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
+  leftPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
+  rightPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
+  ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce , rightPaddle.xEdgeBounce ); //Execute ONCE
 } //End Setup
 //
 void draw() {
@@ -34,6 +38,8 @@ void draw() {
   //
   pongTable.draw();
   ball.draw();
+  leftPaddle.draw();
+  rightPaddle.draw();
   //DRAW Paddles
   //UPDATE ball.paddleUpdate();
   //
