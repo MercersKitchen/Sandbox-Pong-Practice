@@ -30,8 +30,9 @@ void setup() {
   leftPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
   rightPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
   ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce ); //Execute ONCE
+  //Executes Constructor
   for (int i=0; i<fireworks.length; i++) {
-    fireworks[i] = new Ball (mouseX, mouseY, ballDiameter, ballDiameter, ball.c);
+    fireworks[i] = new Ball (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   }
   //print(fireworks[0].w);
 } //End Setup
@@ -45,24 +46,21 @@ void draw() {
   ball.draw();
   leftPaddle.draw();
   rightPaddle.draw();
-  /*for (int i=0; i<fireworks.length; i++) {
-   fireworks[i].draw();
-   println("here");
-   }
-   */
+  //
+  //For this to work, a Boolean trigger must happen in Ball Class when the Ball is stuck in the net
+  //The actual FIREWORKS Class can be deleted.
+  //The trigger would happen in the Ball.draw() and be connected with other VOIDs or RETURNs
+  for (int i=0; i<fireworks.length; i++) {
+    fireworks[i].draw();
+  }
   //
   //Update for next draw-loop
   ball.paddleUpdate(leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce); //Move to Ball.draw()
   //
 } //End draw
 //
-void mousePressed() {
-} //End mousePressed
+void mousePressed() {} //End mousePressed
 //
-void keyPressed() {
-  for (int i=0; i<fireworks.length; i++) {
-    fireworks[i] = new Ball (mouseX, mouseY, appHeight*1/60, appHeight*1/60, 0);
-  }
-} //End keyPressed
+void keyPressed() {} //End keyPressed
 //
 //End Driver
