@@ -26,6 +26,7 @@ class Paddle extends Rectangle {
     if ( pongTableMiddle > x ) {
       xEdgeBounce += w;
     } else {
+      //x -= w; //Teaching Note: use a comment-out to illustrate
       xEdgeBounce -= w;
     }
   } //End Paddle X Update
