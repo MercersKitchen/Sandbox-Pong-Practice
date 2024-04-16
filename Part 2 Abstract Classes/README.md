@@ -72,7 +72,7 @@ For rest of tasks: Class Communication in Driver (Objects) | Class Communication
 - NOTE: Compare and Contrast these driver methods
 - [x] Bounce in the Table (especially top and bottom)
 - [x] Make the Paddles, left and right
-- [ ] Bounce the Ball off the Paddles, gets stuck in the net
+- [x] Bounce the Ball off the Paddles, gets stuck in the net
 - [ ] Ball-in-net triggers Scoreboard
 - [ ] Ball-in-net triggers Fireworks
 - [ ] TBA
