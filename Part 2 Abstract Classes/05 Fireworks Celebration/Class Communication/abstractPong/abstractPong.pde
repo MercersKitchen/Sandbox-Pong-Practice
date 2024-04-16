@@ -8,6 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 PongTable pongTable;
 Ball ball;
+Ball[] fireworks = new Ball[25];
 Paddle leftPaddle, rightPaddle;
 //
 void setup() {
@@ -24,11 +25,15 @@ void setup() {
   pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
   pongTable.ballDiameterUpdate( ballDiameter*2 );
   ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
-  leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground); 
+  leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground);
   rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
   leftPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
   rightPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
-  ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce , rightPaddle.xEdgeBounce ); //Execute ONCE
+  ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce ); //Execute ONCE
+  for (int i=0; i<fireworks.length; i++) {
+    fireworks[i] = new Ball (mouseX, mouseY, ballDiameter, ballDiameter, ball.c);
+  }
+  //print(fireworks[0].w);
 } //End Setup
 //
 void draw() {
@@ -40,9 +45,14 @@ void draw() {
   ball.draw();
   leftPaddle.draw();
   rightPaddle.draw();
+  /*for (int i=0; i<fireworks.length; i++) {
+   fireworks[i].draw();
+   println("here");
+   }
+   */
   //
   //Update for next draw-loop
-  ball.paddleUpdate(leftPaddle.xEdgeBounce , rightPaddle.xEdgeBounce); //Move to Ball.draw()
+  ball.paddleUpdate(leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce); //Move to Ball.draw()
   //
 } //End draw
 //
@@ -50,6 +60,9 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() {
+  for (int i=0; i<fireworks.length; i++) {
+    fireworks[i] = new Ball (mouseX, mouseY, appHeight*1/60, appHeight*1/60, 0);
+  }
 } //End keyPressed
 //
 //End Driver
