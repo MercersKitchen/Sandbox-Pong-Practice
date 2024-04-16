@@ -32,8 +32,11 @@ class Ball extends Circle {
   void pongTableUpdate( float topParameter, float bottomParameter, float leftPaddleEdge, float rightPaddleEdge ) {
     pongTableTop = topParameter;
     pongTableBottom = bottomParameter;
+    paddleUpdate(leftPaddleEdge, rightPaddleEdge); //Executes Only Once in setup()
+  } //End Pong Table Update
+  void paddleUpdate(float leftPaddleEdge, float rightPaddleEdge ) { //for setup() & draw()
     leftPaddleBounceEdge = leftPaddleEdge; //Left Paddle Bounce Line
     rightPaddleBounceEdge = rightPaddleEdge; //Right Paddles Bounce Line
-  } //End Pong Table Update
+  } //End Paddle Update
   //
 } //End Ball

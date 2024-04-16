@@ -23,7 +23,6 @@ void setup() {
   ballDiameter = ballDiameter*1/60;
   ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
   ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h ); //Execute ONCE
-  println(ball.pongTableTop);
 } //End Setup
 //
 void draw() {

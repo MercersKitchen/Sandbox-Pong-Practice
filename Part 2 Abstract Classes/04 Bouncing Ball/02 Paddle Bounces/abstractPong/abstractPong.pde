@@ -40,8 +40,9 @@ void draw() {
   ball.draw();
   leftPaddle.draw();
   rightPaddle.draw();
-  //DRAW Paddles
-  //UPDATE ball.paddleUpdate();
+  //
+  //Update for next draw-loop
+  ball.paddleUpdate(leftPaddle.xEdgeBounce , rightPaddle.xEdgeBounce); //Move to Ball.draw()
   //
 } //End draw
 //
