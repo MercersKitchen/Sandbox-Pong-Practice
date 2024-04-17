@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 PongTable pongTable;
 Ball ball;
-Ball[] fireworks = new Ball[25];
+Ball[] fireworks = new Ball[25]; //Makes the Array List much more difficult
 Paddle leftPaddle, rightPaddle;
 //
 void setup() {

@@ -1,4 +1,4 @@
-class Fireworks extends Circle {
+class Fireworks extends Ball {
   //Global Variables
   //
   Fireworks (float x, float y, float w, float h, color c) {
