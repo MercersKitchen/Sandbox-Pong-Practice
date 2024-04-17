@@ -4,7 +4,7 @@ class Fireworks extends Ball {
   float[] fX = new float [sparks];
   float[] fY = new float [sparks];
   float[] fW = new float [sparks];
-  float[] fH = new float [sparks];
+  //float[] fH = new float [sparks];
   color[] fC = new color [sparks];
   Boolean trigger=false;
   //
@@ -20,12 +20,18 @@ class Fireworks extends Ball {
   //
   //Methods
   void draw() {
-    if ( trigger==true ) {
-      for ( ) {
+    while ( trigger==true ) {
+      println(trigger);
+      for ( int i=0; i<fX.length; i++) {
+        fill(fC[i]);
+        ellipse(fX[i], fY[i], fW[i], fW[i]);
+        fill(rd);
       }
     }
-    //
+    /*
     if ( trigger==true ) trigger=false;
+     println(trigger);
+     */
   } //End draw
   //
   color backgroundColour() {
@@ -42,16 +48,17 @@ class Fireworks extends Ball {
     for ( int i=0; i<fX.length; i++ ) {
       fX[i] = x;
       fY[i] = y;
-      fW[i] = w;
-      fH[i] = h;
-      fC[i] = c;
+      fW[i] = random ( w*1/50, w*1.2 );
+      //fH[i] = h;
+      fC[i] = color(random(255), random(255), random(255));
     }
   } //End UpDate Variables
-  void triggerUpdateXY(float x, float y) {
+  void triggerUpdateXY(float x, float y, Boolean triggerParameter) {
     for ( int i=0; i<fX.length; i++ ) {
       fX[i] = x;
       fY[i] = y;
     }
+    trigger=triggerParameter;
   } //End UpDate Variables
   //
 } //End Fireworks
