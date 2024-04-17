@@ -27,7 +27,7 @@ Abstract Class DOC Map: documenting how variables and method names cascade (valu
 	- Note: Ball Class gives information to Fireworks Class
   - Fireworks: notice this array executes from inside the class, differentMove()
 - [ ] RECTANGLE: colour()
-  - NOte: These classes give information to Ball CLasses
+  - Note: These classes give information to Ball CLasses
   - PongTable: 
   - Paddle: movement
   - Button: hover over, menu, action
@@ -55,7 +55,7 @@ Tasks
 - [x] Build the Pong Table 
 - [x] Build a Ball
 - [x] Build the Paddles
-- [ ] Build the Fireworks Celebration
+- [x] Build the Fireworks Celebration
 - [ ] Build the Score Board
 - [ ] Colour Modes
   - Daytime: light mode (black on white)
@@ -74,7 +74,7 @@ For rest of tasks: Class Communication in Driver (Objects) | Class Communication
 - [x] Make the Paddles, left and right
 - [x] Bounce the Ball off the Paddles, gets stuck in the net
 - [ ] Ball-in-net triggers Scoreboard
-- [ ] Ball-in-net triggers Fireworks
+- [x] Ball-in-net triggers Fireworks
 - [ ] TBA
 
 Advanced Ideas
