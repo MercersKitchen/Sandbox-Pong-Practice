@@ -1,13 +1,31 @@
 class Fireworks extends Ball {
   //Global Variables
+  int sparks = 25;
+  float[] fX = new float [sparks];
+  float[] fY = new float [sparks];
+  float[] fW = new float [sparks];
+  float[] fH = new float [sparks];
+  color[] fC = new color [sparks];
+  Boolean trigger=false;
   //
   Fireworks (float x, float y, float w, float h, color c) {
     super(x, y, w, h, c);
-    //Add gravity to how the Fireworks.move()
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.c = c;
+    updateVars();
   } //Fireworks
   //
   //Methods
   void draw() {
+    if ( trigger==true ) {
+      for ( ) {
+      }
+    }
+    //
+    if ( trigger==true ) trigger=false;
   } //End draw
   //
   color backgroundColour() {
@@ -15,8 +33,25 @@ class Fireworks extends Ball {
     return nm;
   } //End Night Mode Colour Selector
   //
-  void differentMove() { //Note: could be different name
+  void move() { //Note: could be different name
     //CAUTION: not the same as Ball.move()
+    //Adds gravity
     //Students to finish
   } //End move
+  void updateVars() {
+    for ( int i=0; i<fX.length; i++ ) {
+      fX[i] = x;
+      fY[i] = y;
+      fW[i] = w;
+      fH[i] = h;
+      fC[i] = c;
+    }
+  } //End UpDate Variables
+  void triggerUpdateXY(float x, float y) {
+    for ( int i=0; i<fX.length; i++ ) {
+      fX[i] = x;
+      fY[i] = y;
+    }
+  } //End UpDate Variables
+  //
 } //End Fireworks
