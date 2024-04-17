@@ -21,17 +21,12 @@ class Fireworks extends Ball {
   //Methods
   void draw() {
     while ( trigger==true ) {
-      println(trigger);
       for ( int i=0; i<fX.length; i++) {
         fill(fC[i]);
         ellipse(fX[i], fY[i], fW[i], fW[i]);
         fill(rd);
       }
     }
-    /*
-    if ( trigger==true ) trigger=false;
-     println(trigger);
-     */
   } //End draw
   //
   color backgroundColour() {

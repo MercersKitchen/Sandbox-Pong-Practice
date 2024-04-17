@@ -57,7 +57,9 @@ void mousePressed() {
 //
 void keyPressed() {
   //Trigger to start new Ball
-  if (key=='S' || key=='s' ) fireworks.trigger=false;
+  if (key=='S' || key=='s' ) {
+    fireworks.trigger=false;
+  }
 } //End keyPressed
 //
 //End Driver
