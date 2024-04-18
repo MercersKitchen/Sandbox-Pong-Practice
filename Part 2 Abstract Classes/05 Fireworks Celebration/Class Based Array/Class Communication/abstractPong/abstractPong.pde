@@ -8,7 +8,7 @@ import ddf.minim.ugens.*;
 //Global Variables
 PongTable pongTable;
 Ball ball;
-Ball[] fireworks = new Ball[25]; //Makes the Array List much more difficult
+Fireworks fireworks;
 Paddle leftPaddle, rightPaddle;
 //
 void setup() {
@@ -30,11 +30,7 @@ void setup() {
   leftPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
   rightPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
   ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce ); //Execute ONCE
-  //Executes Constructor
-  for (int i=0; i<fireworks.length; i++) {
-    fireworks[i] = new Ball (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
-  }
-  //print(fireworks[0].w);
+  fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
 } //End Setup
 //
 void draw() {
@@ -46,21 +42,24 @@ void draw() {
   ball.draw();
   leftPaddle.draw();
   rightPaddle.draw();
-  //
-  //For this to work, a Boolean trigger must happen in Ball Class when the Ball is stuck in the net
-  //The actual FIREWORKS Class can be deleted.
-  //The trigger would happen in the Ball.draw() and be connected with other VOIDs or RETURNs
-  for (int i=0; i<fireworks.length; i++) {
-    fireworks[i].draw();
-  }
+  fireworks.draw();
   //
   //Update for next draw-loop
   ball.paddleUpdate(leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce); //Move to Ball.draw()
   //
 } //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+  //Testing ONLY
+  fireworks.triggerUpdateXY(mouseX, mouseY, true);
+  //
+} //End mousePressed
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  //Trigger to start new Ball
+  if (key=='S' || key=='s' ) {
+    fireworks.trigger=false;
+  }
+} //End keyPressed
 //
 //End Driver
