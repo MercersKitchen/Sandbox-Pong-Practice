@@ -66,6 +66,9 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 ### Third: 
 - [ ] See Google Classroom
 
+### Forth: Abstract Classes
+- [ ] See Google Classroom
+
 ---
 
 # To Include: URLs
@@ -75,5 +78,6 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 # To Include: 
 - Do not do ball collisions until later
+- Search Algorithms for Ball Collisions
 
 ---

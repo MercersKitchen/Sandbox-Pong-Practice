@@ -56,25 +56,25 @@ Tasks
 - [x] Build a Ball
 - [x] Build the Paddles
 - [x] Build the Fireworks Celebration
-- [ ] Build the Score Board
-- [ ] Colour Modes
+- [ ] (Student Only) Build the Score Board
+- [ ] (Student Only) Colour Modes
   - Daytime: light mode (black on white)
   - Daytime: dark mode (white on black)
   - Nighttime: yellow on black
-- [ ] Build the Buttons:
-  - [Basic] QUIT
-  - [Intermediate] Two-Player, One-Player, Screen Saver
-  - [Advanced] Menu, Personalization
-- [ ] Colour Modes
-- [ ] 
+- [ ] (Student Only) Build the Buttons:
+  - (Student Only, Basic QUIT
+  - (Student Only, Intermediate) Two-Player, One-Player, Screen Saver
+  - (Student Only, Advanced) Menu, Personalization
+- [ ] (Student Only) Colour Modes
+- [ ] TBA
 
 For rest of tasks: Class Communication in Driver (Objects) | Class Communication in Class (Array List)
 - NOTE: Compare and Contrast these driver methods
 - [x] Bounce in the Table (especially top and bottom)
 - [x] Make the Paddles, left and right
 - [x] Bounce the Ball off the Paddles, gets stuck in the net
+- [ ] [x] Ball-in-net triggers Fireworks
 - [ ] Ball-in-net triggers Scoreboard
-- [x] Ball-in-net triggers Fireworks
 - [ ] TBA
 
 Advanced Ideas
