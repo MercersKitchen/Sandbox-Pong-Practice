@@ -58,17 +58,25 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 ## Hackathons to manage learning, demonstration, and group work
 
 ### First: Overloaded Constructor, encapsulated Ball Explosion in BALL
-- [ ] Array can be in MAIN Program
-- [ ] Populated with Multiple BALL instances
+- [x] Array can be in MAIN Program
+- [x] Populated with Multiple BALL instances
 
-### Second: 
-- [ ] See Google Classroom
+### Second: Encapsulated Paddle Bounce Code in Ball-Class creating two ERRORs
+- [x] Bounce limited Pong Table (height variables)
+- [x] Bounce can happen in net, eventually register a score
+- [x] Bounce must happen off paddles
 
-### Third: 
-- [ ] See Google Classroom
+### Third: Pong Table and Button Scaffolding, from the Paddle Class ONLY
+- [x] Pong Table (features according to Case Study, traditional table only for now
+- [x] Buttons from Case Study, all with hover over working
+- [x] Only Quit Button will work for now
+- [x] ADVANCED: Scoreboard registers ball increments
 
 ### Forth: Abstract Classes
-- [ ] See Google Classroom
+- [ ] Include scoreboard
+- [ ] Minimum: one pong ball plays from start to finish
+- [ ] Goal: one match with multiple pong balls, like five different pong balls
+- [ ] Easter Eggs are optional
 
 ---
 
