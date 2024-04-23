@@ -57,8 +57,9 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 ## Hackathons to manage learning, demonstration, and group work
 
-### First: 
-- [ ] See Google Classroom
+### First: Overloaded Constructor, encapsulated Ball Explosion in BALL
+- [ ] Array can be in MAIN Program
+- [ ] Populated with Multiple BALL instances
 
 ### Second: 
 - [ ] See Google Classroom
