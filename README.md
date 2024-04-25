@@ -5,6 +5,9 @@ Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-
 
 **This Sandbox will be used as the Repository Notes until complete**
 
+### Pong Exemplars
+- <a href="https://github.com/Advanced-App-Dev-and-Deploy/Pong-Exemplars">Click Here</a>
+
 ---
 
 # Table of Contents
