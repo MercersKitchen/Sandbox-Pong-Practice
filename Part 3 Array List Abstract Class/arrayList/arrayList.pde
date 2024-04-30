@@ -6,6 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variables
+ArrayList<Shape> shapes = new ArrayList<Shape>();
 //
 void setup() {} //End setup
 //
