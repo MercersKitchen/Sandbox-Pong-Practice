@@ -11,7 +11,7 @@ ArrayList<Shape> shapes = new ArrayList<Shape>();
 void setup() {
   //Display - Students to Add
   //Audio - Students to Add
-  //
+  //Classes - Students to Add, hint: TABs (Teacher to add first)
   
 } //End setup
 //
