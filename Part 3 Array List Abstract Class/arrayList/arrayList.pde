@@ -8,12 +8,20 @@ import ddf.minim.ugens.*;
 //Global Variables
 ArrayList<Shape> shapes = new ArrayList<Shape>();
 //
-void setup() {} //End setup
+void setup() {
+  //Display - Students to Add
+  //Audio - Students to Add
+  //
+  
+} //End setup
 //
-void draw() {} //End draw
+void draw() {
+} //End draw
 //
-void mousePressed() {} //End mousePressed
+void mousePressed() {
+} //End mousePressed
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+} //End keyPressed
 //
 //End MAIN Program
