@@ -10,7 +10,8 @@ ArrayList<Shape> shapes = new ArrayList<Shape>();
 //
 void setup() {
   //Display - Students to Add
-  fullScreen();
+  size(600, 400); 
+  //fullScreen();
   //display();
   //
   //Audio - Students to Add
