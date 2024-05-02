@@ -12,7 +12,7 @@ void setup() {
   //Display - Students to Add
   size(600, 400); 
   //fullScreen();
-  //display();
+  display();
   //
   //Audio - Students to Add
   //musicSetup();
