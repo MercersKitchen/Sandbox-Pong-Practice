@@ -13,37 +13,39 @@ void setup() {
   size(600, 400); 
   //fullScreen();
   display();
+  musicSetup();
   //
-  //Audio - Students to Add
-  //musicSetup();
+  // Night Mode
+  color colourBackground = #050500; //CAUTION: using timer or button to change Night Mode
+  color colourForeground = #ffff00;
+  //
+  //Move to Ball Class for CONSTRUCTOR and UPDATE
+  int ballDiameter = ( appWidth > appHeight ) ? appHeight : appWidth; //display() as landscape makes this redundant
   //
   //Classes - Students to Add, hint: TABs (Teacher to add first)
+  ballDiameter = ballDiameter*1/60;
+  PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
+  pongTable.ballDiameterUpdate( ballDiameter*2 );
+  Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
+  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground);
+  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
+  leftPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
+  rightPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
+  ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce ); //Execute ONCE
+  //fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   //
-  /* Build Local Objects - Students to Add, i.e. start with Ball, then Pong Table, etc.
-   color colourBackground = #050500; //CAUTION: using timer or button to change Night Mode
-   color colourForeground = #ffff00;
-   int ballDiameter = ( appWidth > appHeight ) ? appHeight : appWidth; //display() as landscape makes this redundant
-   ballDiameter = ballDiameter*1/60;
-   PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
-   pongTable.ballDiameterUpdate( ballDiameter*2 );
-   Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
-   Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground);
-   Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
-   leftPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
-   rightPaddle.paddleX_Update(pongTable.w*1/2); //Execute ONCE
-   ball.pongTableUpdate( pongTable.y, pongTable.y+pongTable.h, leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce ); //Execute ONCE
-   //Fireworks Constructor
-   */
-  //
-  //Shapes Global Variable, DOC Map for Number of Objects in your Abstract Pong
-  //shapes.add(leftPaddle); //Element 0, Left Paddle
+  //shapes Global Variable, DOC Map for Number of Objects in your Array List
+  shapes.add(pongTable); //Element 0, pongTable
+  shapes.add(leftPaddle); //Element 1, Left Paddle
+  shapes.add(rightPaddle); //Element 2, Right Paddle
+  shapes.add(ball); //Element 3, Ball
   //Formula: shapes.add();
   //
   //Reminder: all local objects are deleted, "Garbage Heap Collected"
 } //End setup
 //
 void draw() {
-  background(0);
+  //background(0);
   //
   //Arithmetic: code that helps objects talk to each other
   //Ball to get information from current paddle position
