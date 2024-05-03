@@ -1,4 +1,9 @@
 
+See Part 1 & Part 2 for code to copy
+Then clean this code for inheritance and execution ability in shapes.draw()
+
+Clean Up in Aisle 13
+
 Adding the
 abstract void updateSetup ( float variable);
 
