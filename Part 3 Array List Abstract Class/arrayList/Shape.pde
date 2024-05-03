@@ -17,8 +17,8 @@ abstract class Shape {
   } //End Constructor
   //
   //Methods
-  abstract void draw(); //Empty draw()
-  //
-  abstract color backgroundColour(); //End Night Mode Colour Selector
+  abstract void draw();
+  abstract color backgroundColour();
+  abstract void updateSetup( float variable1, float variable2, float variable3, float variable4 );
   //
 } //End Shape

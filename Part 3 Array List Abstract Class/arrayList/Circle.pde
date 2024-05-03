@@ -6,8 +6,8 @@ abstract class Circle extends Shape {
   } //End Circle
   //
   //Methods
-  abstract void draw(); //End draw
-  //
-  abstract color backgroundColour(); //End Night Mode Colour Selector
+  abstract void draw();
+  abstract color backgroundColour();
+  abstract void updateSetup( float variable1, float variable2, float variable3, float variable4 );
   //
 } // End Circle

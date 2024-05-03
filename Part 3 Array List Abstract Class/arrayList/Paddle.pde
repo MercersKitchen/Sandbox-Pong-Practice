@@ -22,11 +22,12 @@ class Paddle extends Rectangle {
    */
   //
   //Getters and Setters
-  void paddleX_Update( float pongTableMiddle) {
+  void updateSetup( float pongTableMiddle, float variable2, float variable3, float variable4 ) {
+    if (x > pongTableMiddle) ;
     if ( pongTableMiddle > x ) {
       xEdgeBounce += w;
     } else {
-      //x -= w; //Teaching Note: use a comment-out to illustrate
+      x -= w;
       xEdgeBounce -= w;
     }
   } //End Paddle X Update

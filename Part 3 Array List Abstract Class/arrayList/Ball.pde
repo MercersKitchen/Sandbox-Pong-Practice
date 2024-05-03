@@ -29,7 +29,7 @@ class Ball extends Circle {
    */
   //
   // Getters & Setters
-  void pongTableUpdate( float topParameter, float bottomParameter, float leftPaddleEdge, float rightPaddleEdge ) {
+  void updateSetup( float topParameter, float bottomParameter, float leftPaddleEdge, float rightPaddleEdge ) {
     pongTableTop = topParameter;
     pongTableBottom = bottomParameter;
     paddleUpdate(leftPaddleEdge, rightPaddleEdge); //Executes Only Once in setup()

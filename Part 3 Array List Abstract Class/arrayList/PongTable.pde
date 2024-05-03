@@ -40,7 +40,7 @@ class PongTable extends Rectangle {
    */
   //
   //Getters and Setters
-  void ballDiameterUpdate( float netWidth ) {
+  void updateSetup( float netWidth, float variable2, float variable3, float variable4 ) {
     leftNetX_Top = x+netWidth;
     leftNetY_Top = y;
     leftNetX_Bottom = leftNetX_Top;
