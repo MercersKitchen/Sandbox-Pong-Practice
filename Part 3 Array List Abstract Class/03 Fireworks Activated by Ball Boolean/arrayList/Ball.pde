@@ -1,7 +1,7 @@
 class Ball extends Circle {
   //Local Variables to Ball in Shape, will be deleted
   //Global Variables to Ball
-  float pongTableLeft, pongTableRight, pongTableTopY, pongTableBottomY, pongTableX_Middle;
+  float pongTableLeft, pongTableRight, pongTableTopY, pongTableX_Middle;
   float leftPaddleTop, leftPaddleBottom, rightPaddleTop, rightPaddleBottom;
   float xSpeed, ySpeed, xSpeedChange, ySpeedChange;
   //
@@ -18,12 +18,16 @@ class Ball extends Circle {
     //
     if ( s==false && ( x>el && x<er ) ) { //Logical Short Circuit Boolean, !=
       move(); //regular movement, ELSE IF ignored
-    } else if ( x<=el ) { // <= & >= creates clear binary boundary
+    } else if ( x <= pongTableLeft || x<=el) { // <= & >= creates clear binary boundary
       x = pongTableLeft+w; //unseen decimals in a float cause the x-value to break free
       s=true;
-    } else if ( x>=er ) {
+      bx=x;
+      by=y;
+    } else if ( x >= pongTableRight || x>=er) {
       x = pongTableRight-w; //NOTE: int() can block unseen decimals if no clear boundary
       s=true;
+      bx=x;
+      by=y;
     }
   } //End Draw
   //
@@ -47,7 +51,6 @@ class Ball extends Circle {
     pongTableLeft = leftParameter;
     pongTableRight = rightParameter;
     pongTableTopY = topParameter;
-    pongTableBottomY = bottomParameter;
     pongTableX_Middle = middleParameter;
     el = leftPaddleEdge; //Left Paddle X Bounce Line
     er = rightPaddleEdge; //Right Paddles X Bounce Line
@@ -84,7 +87,7 @@ class Ball extends Circle {
   } //End yDirection
   void bounce() {
     //Top and Bottom
-    if ( y < pongTableTopY+(w*1/2) || y > pongTableBottomY-(w*1/2) ) ySpeed *= -1;
+    if ( y < pongTableTopY+(w*1/2) || y > pongTableBottom-(w*1/2) ) ySpeed *= -1;
     //
     //Left Paddle, with search (Shortcut Evaluation
     if (x < pongTableX_Middle*1/2 && x < el+(w*1/2) ) {
