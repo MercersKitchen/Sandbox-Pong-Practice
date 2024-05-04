@@ -34,7 +34,7 @@ void setup() {
   ball.updateSetup( pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.el, rightPaddle.er, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
   //fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   //
-  //println(ball.x, ball.el, ball.y, ball.er, ball.s); //Inspect Objects
+  //println(pongTable.x, pongTable.x+pongTable.w); //Inspect Objects
   //
   //shapes Global Variable, DOC Map for Number of Objects in your Array List
   shapes.add(pongTable); //Element 0, pongTable

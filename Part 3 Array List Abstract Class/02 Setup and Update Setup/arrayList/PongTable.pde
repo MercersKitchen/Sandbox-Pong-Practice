@@ -1,11 +1,12 @@
 class PongTable extends Rectangle {
-  //Global Variables
+  //Local Variables to PongTable in Shape, will be deleted
+  //Global Variables to PongTable
   float leftNetX_Top, leftNetY_Top, leftNetX_Bottom, leftNetY_Bottom;
   float rightNetX_Top, rightNetY_Top, rightNetX_Bottom, rightNetY_Bottom;
   float middlePongTableX, middlePongTableY_Top, middlePongTableY_Bottom;
   //
-  PongTable (float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  PongTable (float x, float y, float w, float h, float el, float er, Boolean s, color c) {
+    super(x, y, w, h, el, er, s, c);
     c = backgroundColour();
   } //End PongTable
   //
@@ -40,7 +41,7 @@ class PongTable extends Rectangle {
    */
   //
   //Getters and Setters
-  void updateSetup( float netWidth, float variable2, float variable3, float variable4 ) {
+  void updateSetup( float netWidth, float variable2, float variable3, float variable4, float variable5, float variable6, float variable7, float variable8, float variable9, float variable10, float variable11 ) {
     leftNetX_Top = x+netWidth;
     leftNetY_Top = y;
     leftNetX_Bottom = leftNetX_Top;

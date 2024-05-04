@@ -1,9 +1,9 @@
 class Paddle extends Rectangle {
-  //Global Variables
-  float xEdgeBounce=0.0;
+  //Local Variables to Paddle in Shape, will be deleted
+  //Global Variables to Paddle
   //
-  Paddle (float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  Paddle (float x, float y, float w, float h, float el, float er, Boolean s, color c) {
+    super(x, y, w, h, el, er, s, c);
   } //End Paddle
   //
   //Methods
@@ -22,13 +22,12 @@ class Paddle extends Rectangle {
    */
   //
   //Getters and Setters
-  void updateSetup( float pongTableMiddle, float variable2, float variable3, float variable4 ) {
-    if (x > pongTableMiddle) ;
-    if ( pongTableMiddle > x ) {
-      xEdgeBounce += w;
+  void updateSetup( float pongTableMiddle, float xNetValue, float variable3, float variable4, float variable5, float variable6, float variable7, float variable8, float variable9, float variable10, float variable11 ) {
+    if ( x < pongTableMiddle ) {
+      el += xNetValue+w;
     } else {
       x -= w;
-      xEdgeBounce -= w;
+      er += xNetValue-w;
     }
   } //End Paddle X Update
 } //End Paddle
