@@ -6,8 +6,6 @@ abstract class Shape {
   float h; //Height
   float el; //left bounce edge
   float er; //right bounce edge
-  float tl; //table left value, "in the net"
-  float tr; //table right value, "in the net"
   Boolean s; //Ball Scores
   color c, rd; //Shape Colour
   //

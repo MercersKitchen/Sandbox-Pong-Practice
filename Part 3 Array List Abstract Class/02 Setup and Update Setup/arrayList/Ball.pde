@@ -16,12 +16,14 @@ class Ball extends Circle {
     ellipse(x, y, w, h);
     fill(rd);
     //
-    if ( x <= pongTableLeft || x >= pongTableRight ) {
-      if ( x <= pongTableLeft ) int (x = pongTableLeft+w); //unseen decimals in a float cause the x-value to break free
-      if ( x >= pongTableRight ) int (x = pongTableRight-w);
+    if ( s==false && ( x>el && x<er ) ) { //Logical Short Circuit Boolean, !=
+      move(); //regular movement, ELSE IF ignored
+    } else if ( x <= pongTableLeft || x<=el) { // <= & >= creates clear binary boundary
+      x = pongTableLeft+w; //unseen decimals in a float cause the x-value to break free
       s=true;
-    } else {
-      if ( s==false && x>el || x<er) move();
+    } else if ( x >= pongTableRight || x>=er) {
+      x = pongTableRight-w; //NOTE: int() can block unseen decimals if no clear boundary
+      s=true;
     }
   } //End Draw
   //
