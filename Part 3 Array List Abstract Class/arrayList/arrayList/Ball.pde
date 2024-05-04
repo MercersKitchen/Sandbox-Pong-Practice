@@ -16,17 +16,16 @@ class Ball extends Circle {
     ellipse(x, y, w, h);
     fill(rd);
     //
-    if ( s==false && x <= tl ) { //Logical Short Circuit
-      int (x = tl+w); //unseen decimals in a float cause the x-value to break free
+    if ( s==false && ( x>el && x<er ) ) { //Logical Short Circuit Boolean, !=
+      move(); //regular movement, ELSE IF ignored
+    } else if ( x <= tl || x<=el) { // <= & >= creates clear binary boundary
+      x = tl+w; //unseen decimals in a float cause the x-value to break free
+      s=true;
+    } else if ( x >= tr || x>=er) {
+      x = tr-w; //NOTE: int() can block unseen decimals if no clear boundary
       s=true;
     }
-    if ( s==false && x >= tr ) {
-      int (x = tr-w);
-      s=true;
-    }
-    if ( s==false && x>el || x<er ) {
-      move();
-    }
+    //
 } //End Draw
 //
 color backgroundColour() {
