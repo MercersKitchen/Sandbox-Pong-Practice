@@ -1,12 +1,12 @@
 class Ball extends Circle {
-  //Global Variables
+  //Local Variables to Ball in Shape, will be deleted
+  //Global Variables to Ball
   float pongTableTopY, pongTableBottomY, pongTableX_Middle;
-  float leftPaddleBounceEdge, rightPaddleBounceEdge;
   float leftPaddleTop, leftPaddleBottom, rightPaddleTop, rightPaddleBottom;
   float xSpeed, ySpeed, xSpeedChange, ySpeedChange;
   //
-  Ball(float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  Ball(float x, float y, float w, float h, float el, float er, float tl, float tr, Boolean s, color c) {
+    super(x, y, w, h, el, er, tl, tr, s, c);
   } //End Ball
   //
   //Methods
@@ -16,12 +16,12 @@ class Ball extends Circle {
     ellipse(x, y, w, h);
     fill(rd);
     //
-    if ( x > leftPaddleBounceEdge-w*2 || x < rightPaddleBounceEdge+w*2 ) {
-      move();
-      println("here");
+    if ( x <= tl || x >= tr ) {
+      if ( x <= tl ) int (x = tl+w); //unseen decimals in a float cause the x-value to break free
+      if ( x >= tr ) int (x = tr-w);
+      s=true;
     } else {
-      if ( x < leftPaddleBounceEdge-w*2 ) x=leftPaddleBounceEdge-w;
-      if ( x < rightPaddleBounceEdge+w*2 ) x=rightPaddleBounceEdge+w;
+      if ( s==false && x>el || x<er) move();
     }
   } //End Draw
   //
@@ -45,8 +45,8 @@ class Ball extends Circle {
     pongTableTopY = topParameter;
     pongTableBottomY = bottomParameter;
     pongTableX_Middle = middleParameter;
-    leftPaddleBounceEdge = leftPaddleEdge; //Left Paddle X Bounce Line
-    rightPaddleBounceEdge = rightPaddleEdge; //Right Paddles X Bounce Line
+    el = leftPaddleEdge; //Left Paddle X Bounce Line
+    er = rightPaddleEdge; //Right Paddles X Bounce Line
     paddleUpdate(leftPaddleTopParameter, leftPaddleBottomParameter, rightPaddleTopParameter, rightPaddleBottomParameter); //Executes Only Once in setup()
     //
     //For Moving the Ball
@@ -82,11 +82,11 @@ class Ball extends Circle {
     if ( y < pongTableTopY+(w*1/2) || y > pongTableBottomY-(w*1/2) ) ySpeed *= -1;
     //
     //Left Paddle, with search (Shortcut Evaluation
-    if (x < pongTableX_Middle*1/2 && x < leftPaddleBounceEdge+(w*1/2) ) {
+    if (x < pongTableX_Middle*1/2 && x < el+(w*1/2) ) {
       if ( y > leftPaddleTop && y < leftPaddleBottom ) xSpeed *= -1;
     }
     //Right Paddle, with search
-    if (x > pongTableX_Middle*3/2 && x > rightPaddleBounceEdge-(w*1/2)) {
+    if (x > pongTableX_Middle*3/2 && x > er-(w*1/2)) {
       if ( y > rightPaddleTop && y < rightPaddleBottom ) xSpeed *= -1;
     }
   } //End bounce

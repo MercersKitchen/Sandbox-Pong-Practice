@@ -1,8 +1,9 @@
 abstract class Rectangle extends Shape {
-  //Global Variables
+  //Local Variables to Rectangle in Shape, will be deleted
+  //Global Variables to Rectangle
   //
-  Rectangle(float x, float y, float w, float h, color c) {
-    super(x, y, w, h, c);
+  Rectangle(float x, float y, float w, float h, float el, float er, float tl, float tr, Boolean s, color c) {
+    super(x, y, w, h, el, er, tl, tr, s, c);
   }
   //
   //Methods

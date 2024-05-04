@@ -24,17 +24,17 @@ void setup() {
   //
   //Classes - Students to Add, hint: TABs (Teacher to add first)
   ballDiameter = ballDiameter*1/60;
-  PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
+  PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, 0.0, 0.0, 0.0, 0.0, false, colourBackground);
   pongTable.updateSetup( ballDiameter*2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 );
-  Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
-  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground);
-  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
+  Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, 0.0, 0.0, pongTable.x, pongTable.x+pongTable.w, false, colourForeground );
+  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, 0.0, 0.0, 0.0, 0.0, false, colourForeground);
+  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, 0.0, 0.0, 0.0, 0.0, false, colourForeground);
   leftPaddle.updateSetup( pongTable.w*1/2, pongTable.leftNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   rightPaddle.updateSetup( pongTable.w*1/2, pongTable.rightNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
-  ball.updateSetup( pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.xEdgeBounce, rightPaddle.xEdgeBounce, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
+  ball.updateSetup( pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.el, rightPaddle.er, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
   //fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   //
-  println(); //Inspect Objects
+  //println(ball.x, ball.el, ball.y, ball.er, ball.s); //Inspect Objects
   //
   //shapes Global Variable, DOC Map for Number of Objects in your Array List
   shapes.add(pongTable); //Element 0, pongTable
@@ -47,7 +47,7 @@ void setup() {
 } //End setup
 //
 void draw() {
-  println(shapes.get(3).x, shapes.get(3).y);
+  println(shapes.get(3).el, shapes.get(3).x, shapes.get(3).er, shapes.get(3).s );
   //Arithmetic: code that helps objects talk to each other
   //Ball to get information from current paddle position
   //  Search for Paddle when close to it
