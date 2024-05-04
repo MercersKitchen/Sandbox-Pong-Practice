@@ -5,8 +5,8 @@ class Ball extends Circle {
   float leftPaddleTop, leftPaddleBottom, rightPaddleTop, rightPaddleBottom;
   float xSpeed, ySpeed, xSpeedChange, ySpeedChange;
   //
-  Ball(float x, float y, float w, float h, float el, float er, Boolean s, color c) {
-    super(x, y, w, h, el, er, s, c);
+  Ball(float x, float y, float w, float h, color c) {
+    super(x, y, w, h, c);
   } //End Ball
   //
   //Methods
@@ -51,9 +51,10 @@ class Ball extends Circle {
     pongTableX_Middle = middleParameter;
     el = leftPaddleEdge; //Left Paddle X Bounce Line
     er = rightPaddleEdge; //Right Paddles X Bounce Line
+    s = false;
     paddleUpdate(leftPaddleTopParameter, leftPaddleBottomParameter, rightPaddleTopParameter, rightPaddleBottomParameter); //Executes Only Once in setup()
     //
-    //For Moving the Ball
+    //For Moving the Ball, Executed Once
     xSpeed = xDirection(); //float, could be any number
     ySpeed = yDirection(); //float, could be any number
     //ERROR: random() will choose ZERO, not only -1 & 1

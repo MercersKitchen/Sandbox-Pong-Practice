@@ -6,18 +6,15 @@ abstract class Shape {
   float h; //Height
   float el; //left bounce edge
   float er; //right bounce edge
-  Boolean s; //Ball Scores
+  Boolean s; //Ball Stops Moving, set in Ball Class Only
   color c, rd; //Shape Colour
   //
   //Constructor
-  Shape(float x, float y, float w, float h, float el, float er, Boolean s, color c) {
+  Shape(float x, float y, float w, float h, color c) {
     this.x = x;
     this.y = y;
     this.w = w;
     this.h = h;
-    this.el = el;
-    this.er = er;
-    this.s = s;
     this.c = c;
     rd = backgroundColour(); //Populated Once is all constructors and updated constructors
   } //End Constructor

@@ -2,8 +2,8 @@ class Paddle extends Rectangle {
   //Local Variables to Paddle in Shape, will be deleted
   //Global Variables to Paddle
   //
-  Paddle (float x, float y, float w, float h, float el, float er, Boolean s, color c) {
-    super(x, y, w, h, el, er, s, c);
+  Paddle (float x, float y, float w, float h, color c) {
+    super(x, y, w, h, c);
   } //End Paddle
   //
   //Methods

@@ -5,8 +5,8 @@ class PongTable extends Rectangle {
   float rightNetX_Top, rightNetY_Top, rightNetX_Bottom, rightNetY_Bottom;
   float middlePongTableX, middlePongTableY_Top, middlePongTableY_Bottom;
   //
-  PongTable (float x, float y, float w, float h, float el, float er, Boolean s, color c) {
-    super(x, y, w, h, el, er, s, c);
+  PongTable (float x, float y, float w, float h, color c) {
+    super(x, y, w, h, c);
     c = backgroundColour();
   } //End PongTable
   //

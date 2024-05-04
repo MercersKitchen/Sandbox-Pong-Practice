@@ -24,11 +24,11 @@ void setup() {
   //
   //Classes - Students to Add, hint: TABs (Teacher to add first)
   ballDiameter = ballDiameter*1/60;
-  PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, 0.0, 0.0, false, colourBackground);
+  PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
   pongTable.updateSetup( ballDiameter*2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 );
-  Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, 0.0, 0.0, false, colourForeground );
-  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, 0.0, 0.0, false, colourForeground);
-  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, 0.0, 0.0, false, colourForeground);
+  Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
+  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground);
+  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
   leftPaddle.updateSetup( pongTable.w*1/2, pongTable.leftNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   rightPaddle.updateSetup( pongTable.w*1/2, pongTable.rightNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   ball.updateSetup( pongTable.x, pongTable.x+pongTable.w, pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.el, rightPaddle.er, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
