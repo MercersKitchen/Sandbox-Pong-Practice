@@ -49,9 +49,9 @@ class Ball extends Circle {
     pongTableTopY = topParameter;
     pongTableBottomY = bottomParameter;
     pongTableX_Middle = middleParameter;
-    el = leftPaddleEdge; //Left Paddle X Bounce Line
-    er = rightPaddleEdge; //Right Paddles X Bounce Line
-    s = false;
+    el = leftPaddleEdge; //Left Paddle X Bounce Line //NOTE: second population
+    er = rightPaddleEdge; //Right Paddles X Bounce Line //NOTE: second population
+    s = false; //Note: FIRST population
     paddleUpdate(leftPaddleTopParameter, leftPaddleBottomParameter, rightPaddleTopParameter, rightPaddleBottomParameter); //Executes Only Once in setup()
     //
     //For Moving the Ball, Executed Once

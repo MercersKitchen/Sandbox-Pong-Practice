@@ -23,7 +23,7 @@ class Paddle extends Rectangle {
   //
   //Getters and Setters
   void updateSetup( float pongTableMiddle, float xNetValue, float variable3, float variable4, float variable5, float variable6, float variable7, float variable8, float variable9, float variable10, float variable11 ) {
-    if ( x < pongTableMiddle ) {
+    if ( x < pongTableMiddle ) { //NOTE: var==NULL, IF == false
       el += xNetValue+w;
     } else {
       x -= w;
