@@ -10,7 +10,7 @@ ArrayList<Shape> shapes = new ArrayList<Shape>();
 //
 void setup() {
   //Display - Students to Add
-  size(600, 400);
+  size(600, 400); 
   //fullScreen();
   display();
   musicSetup();
@@ -27,13 +27,14 @@ void setup() {
   PongTable pongTable = new PongTable (appWidth*0, appHeight*2/10, appWidth, appHeight*7/10, colourBackground);
   pongTable.updateSetup( ballDiameter*2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 );
   Ball ball = new Ball( pongTable.w*1/2, pongTable.y+(pongTable.h*1/2), ballDiameter, ballDiameter, colourForeground );
-  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.pongTableBottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.pongTableBottom-pongTable.leftNetY_Top )/4, colourForeground);
-  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.pongTableBottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.pongTableBottom-pongTable.rightNetY_Top )/4, colourForeground);
+  Paddle leftPaddle = new Paddle (pongTable.leftNetX_Top, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/2 + pongTable.leftNetY_Top*1/2, ballDiameter*1/2, ( pongTable.leftNetY_Bottom-pongTable.leftNetY_Top )/4, colourForeground);
+  Paddle rightPaddle = new Paddle (pongTable.rightNetX_Top, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/2 + pongTable.rightNetY_Top*1/2, ballDiameter*1/2, ( pongTable.rightNetY_Bottom-pongTable.rightNetY_Top )/4, colourForeground);
   leftPaddle.updateSetup( pongTable.w*1/2, pongTable.leftNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   rightPaddle.updateSetup( pongTable.w*1/2, pongTable.rightNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   ball.updateSetup( pongTable.x, pongTable.x+pongTable.w, pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.el, rightPaddle.er, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
+  //fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   //
-  //println(ball.x, ball.y, ball.ySpeed, ball.ySpeedChange); //Inspect Objects
+  //println(ball.x, ball.el, ball.y, ball.er, ball.s); //Inspect Objects
   //
   //shapes Global Variable, DOC Map for Number of Objects in your Array List
   shapes.add(pongTable); //Element 0, pongTable
@@ -46,7 +47,13 @@ void setup() {
 } //End setup
 //
 void draw() {
-  //println(shapes.get(3).x, shapes.get(3).y, shapes.get(3).s, shapes.get(3).bx, shapes.get(3).by );
+  println(shapes.get(3).el, shapes.get(3).x, shapes.get(3).er, shapes.get(3).s, shapes.get(3).bx ,shapes.get(3).by );
+  //Arithmetic: code that helps objects talk to each other
+  //Ball to get information from current paddle position
+  //  Search for Paddle when close to it
+  //Ball to tell position if in the net: fireworks, scoreboard, reset, etc
+  //shapes.get(2).paddleBounceLeft( shapes.get(0).xGetter(), shapes.get(0).yGetter(), shapes.get(0).wGetter(), shapes.get(0).hGetter() );
+  //shapes.get(2).paddleBounceRight( shapes.get(1).xGetter(), shapes.get(1).yGetter(), shapes.get(1).hGetter() );
   //
   for ( Shape s : shapes ) {
     s.draw();
@@ -63,6 +70,4 @@ void mousePressed() {
 void keyPressed() {
 } //End keyPressed
 //
-void theyScore() {
-} //End They Score!
 //End MAIN Program

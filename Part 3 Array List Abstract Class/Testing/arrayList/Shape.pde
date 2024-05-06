@@ -6,11 +6,9 @@ abstract class Shape {
   float h; //Height
   float el; //left bounce edge
   float er; //right bounce edge
-  Boolean s=false; //Ball Stops Moving, set in Ball Class Only
+  Boolean s; //Ball Stops Moving, set in Ball Class Only
   float bx=0.0; //Ball Scoring Position on x-axis or width
   float by=0.0;
-  float pongTableBottom; //Created in PongTable
-  //used in Ball, Fireworks, and Paddle-Movement Classes & Objects
   color c, rd; //Shape Colour
   //
   //Constructor
