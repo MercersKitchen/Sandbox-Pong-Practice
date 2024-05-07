@@ -32,7 +32,7 @@ void setup() {
   leftPaddle.updateSetup( pongTable.w*1/2, pongTable.leftNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   rightPaddle.updateSetup( pongTable.w*1/2, pongTable.rightNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   ball.updateSetup( pongTable.x, pongTable.x+pongTable.w, pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.el, rightPaddle.er, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
-  //fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
+  //Fireworks fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   //
   //println(ball.x, ball.el, ball.y, ball.er, ball.s); //Inspect Objects
   //
@@ -47,7 +47,7 @@ void setup() {
 } //End setup
 //
 void draw() {
-  println(shapes.get(3).el, shapes.get(3).x, shapes.get(3).er, shapes.get(3).s, shapes.get(3).bx ,shapes.get(3).by );
+  //println(shapes.get(3).el, shapes.get(3).x, shapes.get(3).er, shapes.get(3).s, shapes.get(3).bx ,shapes.get(3).by );
   //Arithmetic: code that helps objects talk to each other
   //Ball to get information from current paddle position
   //  Search for Paddle when close to it

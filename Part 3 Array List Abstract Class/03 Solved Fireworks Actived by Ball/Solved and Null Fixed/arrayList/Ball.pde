@@ -24,16 +24,17 @@ class Ball extends Circle {
       bx=x; //Ball Scoring Position on x-axis or width
       by=y;
       fireworks = new Fireworks( bx, by, w, h, c );
-      fireworks.updateConstructor( x, y, w ); //CAUTION: s=false at start of fame
+      fireworks.updateSetup( bx, by, w, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //CAUTION: s=false at start of fame
       s=true;
     } else if ( x>=er ) {
       x = pongTableRight-w; //NOTE: int() can block unseen decimals if no clear boundary
       bx=x; //Ball Scoring Position on x-axis or width
       by=y;
       fireworks = new Fireworks( bx, by, w, h, c );
-      fireworks.updateConstructor( bx, by, w ); //CAUTION: s=false at start of fame
+      fireworks.updateSetup( bx, by, w, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //CAUTION: s=false at start of fame
       s=true;
     }
+    if ( s==true ) fireworks.draw();
   } //End Draw
   //
   color backgroundColour() {

@@ -17,7 +17,7 @@ class Fireworks extends Ball {
   Fireworks ( float x, float y, float w, float h, color c ) {
     super(x, y, w, h, c);
   } //End Constructor
-  void updateConstructor( float xp, float yp, float wp ) {
+  void updateSetup( float xp, float yp, float wp ) {
     //
     /*for ( float fxs : fx ) {
      fxs = x;
@@ -40,16 +40,16 @@ class Fireworks extends Ball {
   //
   //Methods
   void draw() {
-    if ( s==true ) { //Shape Global Variable
+    //if ( s==true ) { //Shape Global Variable
       //if ( update==true ) xUpdate();
       for ( int i=0; i<fx.length; i++ ) {
         fill(fc[i]);
-        if ( fy[i]-w*1/2 <= pongTableBottomY ) ellipse(fx[i], fy[i], w, h);
+        if ( fy[i]-w*1/2 <= pongTableBottomY ) ellipse(fx[i], fy[i], fd[i], fd[i]);
         fill(rd);
         fx[i] = moveX( fx[i], xSpeed[i], xSpeedChange[i] ) ;
         fy[i] = moveY( fy[i], ySpeed[i], ySpeedChange[i] ) ;
       }
-    } //Drawing Fireworks
+    //} //Drawing Fireworks
   } //End draw
   color backgroundColour() {
     color nm = 0;

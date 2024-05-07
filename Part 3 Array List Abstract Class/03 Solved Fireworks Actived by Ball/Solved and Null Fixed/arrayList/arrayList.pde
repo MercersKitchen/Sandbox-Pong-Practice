@@ -32,7 +32,7 @@ void setup() {
   leftPaddle.updateSetup( pongTable.w*1/2, pongTable.leftNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   rightPaddle.updateSetup( pongTable.w*1/2, pongTable.rightNetX_Top, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ); //Execute ONCE
   ball.updateSetup( pongTable.x, pongTable.x+pongTable.w, pongTable.y, pongTable.y+pongTable.h, pongTable.middlePongTableX, leftPaddle.el, rightPaddle.er, leftPaddle.y, leftPaddle.y+leftPaddle.h, rightPaddle.y, rightPaddle.y+rightPaddle.h ); //Execute ONCE
-  //fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
+  //Fireworks fireworks = new Fireworks (appWidth*-1, appHeight*-1, ballDiameter, ballDiameter, ball.c);
   //
   //println(ball.x, ball.el, ball.y, ball.er, ball.s); //Inspect Objects
   //

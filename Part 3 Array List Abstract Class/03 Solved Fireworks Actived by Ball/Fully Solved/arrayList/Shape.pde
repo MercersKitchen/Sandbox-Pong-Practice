@@ -9,6 +9,9 @@ abstract class Shape {
   Boolean s; //Ball Stops Moving, set in Ball Class Only
   float bx=0.0; //Ball Scoring Position on x-axis or width
   float by=0.0;
+  float ptm; //Pong Table Middle X Value
+  float pty; //Pong Table Bottom Y Value
+  float pby; //Pong Table Bottom Y Value
   color c, rd; //Shape Colour
   //
   //Constructor

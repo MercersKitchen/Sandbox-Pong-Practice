@@ -19,20 +19,28 @@ class Ball extends Circle {
     //
     if ( s==false && ( x>el && x<er ) ) { //Logical Short Circuit Boolean, !=
       move(); //regular movement, ELSE IF ignored
-    } else if ( x<=el ) { // <= & >= creates clear binary boundary
+    } else if ( s==false && x<=el ) { // <= & >= creates clear binary boundary
       x = pongTableLeft+w; //unseen decimals in a float cause the x-value to break free
       bx=x; //Ball Scoring Position on x-axis or width
       by=y;
+      pty=pongTableTopY;
+      pby=pongTableBottomY;
+      ptm=pongTableX_Middle;
       fireworks = new Fireworks( bx, by, w, h, c );
-      fireworks.updateConstructor( x, y, w ); //CAUTION: s=false at start of fame
-      s=true;
-    } else if ( x>=er ) {
+      fireworks.updateSetup( bx, by, w, pty, pby, ptm, 0.0, 0.0, 0.0, 0.0, 0.0 ); //CAUTION: s=false at start of fame
+      s=fireworks.s=true; //Alternate Fireworks update
+    } else if ( s==false && x>=er ) {
       x = pongTableRight-w; //NOTE: int() can block unseen decimals if no clear boundary
       bx=x; //Ball Scoring Position on x-axis or width
       by=y;
+      pty = pongTableTopY;
+      pby = pongTableBottomY;
+      ptm = pongTableX_Middle; 
       fireworks = new Fireworks( bx, by, w, h, c );
-      fireworks.updateConstructor( bx, by, w ); //CAUTION: s=false at start of fame
-      s=true;
+      fireworks.updateSetup( bx, by, w, pty, pby, ptm, 0.0, 0.0, 0.0, 0.0, 0.0 ); //CAUTION: s=false at start of fame
+      s=fireworks.s=true; //Alternate Fireworks update
+    } else {
+      fireworks.draw();
     }
   } //End Draw
   //
@@ -61,6 +69,7 @@ class Ball extends Circle {
     el = leftPaddleEdge; //Left Paddle X Bounce Line //NOTE: second population
     er = rightPaddleEdge; //Right Paddles X Bounce Line //NOTE: second population
     s = false; //Note: FIRST population
+    
     paddleUpdate(leftPaddleTopParameter, leftPaddleBottomParameter, rightPaddleTopParameter, rightPaddleBottomParameter); //Executes Only Once in setup()
     //
     //For Moving the Ball, Executed Once
