@@ -1,4 +1,4 @@
-# Sandbox Pong Practice
+# DELETE Sandbox Pong Practice
 CS30 Daily Lessons
 
 Mr. Mercer's Notes Repository (UNDER CONSTRUCTION): https://github.com/Advanced-App-Dev-and-Deploy/Pong-OPP-Lessons
